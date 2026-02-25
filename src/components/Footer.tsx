@@ -78,7 +78,9 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/kanishk-jagwani-b81579134/"
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex items-center gap-3 text-white/50 hover:text-purple-400 transition-colors"
                 >
                   LinkedIn ↗
