@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #050505;
+    --text: #ffffff;
+    --primary: #8a2be2;
+    --secondary: #00ffff;
+    --accent: #ff00ff;
+  }
+
+  html,
+  body {
+    @apply bg-[#050505] text-white font-dm-sans antialiased overflow-x-hidden;
+    cursor: none; /* Hide default cursor for custom one */
+  }
+
+  ::selection {
+    @apply bg-cyan-primary/40 text-white;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-syne font-extrabold text-5xl md:text-7xl lg:text-[100px] leading-[0.9] tracking-tighter;
+  }
+  .section-label {
+    @apply font-jetbrains text-xs font-semibold tracking-[4px] uppercase text-cyan-primary mb-6 flex items-center gap-4;
+  }
+  .section-label::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: var(--secondary);
+  }
+
+  /* Crazy BTN */
+  .btn-premium {
+    @apply relative px-8 py-4 rounded-full font-syne font-bold overflow-hidden isolation-auto z-10 inline-flex justify-center items-center gap-2;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-premium::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, #8a2be2, #00ffff, #ff00ff);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .btn-premium:hover::before {
+    opacity: 1;
+  }
+  .btn-premium:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+    border-color: transparent;
+  }
+}
+
+/* Base custom cursor - Only show on devices with a mouse */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+  }
+  .cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    transition:
+      width 0.2s,
+      height 0.2s,
+      background-color 0.2s;
+    mix-blend-mode: difference;
+  }
+  body:hover .cursor-outline {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* On touch devices, ensure cursor is visible */
+@media (hover: none) {
+  html,
+  body {
+    cursor: auto !important;
+  }
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important;
+  }
+}
+
+/* Background Animated Grid */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-size: 100px 100px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  transform: perspective(1000px) rotateX(60deg) translateY(-100px)
+    translateZ(-200px);
+  animation: gridMove 20s linear infinite;
+}
+@keyframes gridMove {
+  0% {
+    transform: perspective(1000px) rotateX(60deg) translateY(0)
+      translateZ(-200px);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(60deg) translateY(100px)
+      translateZ(-200px);
+  }
+}
+
+/* Ambient glow orbs */
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.5;
+  animation: orbDrift 15s ease-in-out infinite alternate;
+}
+@keyframes orbDrift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(100px, -150px) scale(1.5);
+  }
+}
+
+/* Text glow */
+.text-glow {
+  text-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+}
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Bento Glass Box */
+.bento-box {
+  background: rgba(20, 20, 25, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bento-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+}
+.bento-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(0, 255, 255, 0.3);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+/* Stacking Cards */
+.sticky-card {
+  position: sticky;
+  top: 15vh;
+  padding: 40px;
+  transform-origin: top center;
+}

@@ -1,0 +1,12 @@
+export { default as DemoDashboard } from "./DemoDashboard";
+export { default as DemoContacts } from "./DemoContacts";
+export { default as DemoLeads } from "./DemoLeads";
+export { default as DemoProjects } from "./DemoProjects";
+export { default as DemoTransactions } from "./DemoTransactions";
+export { default as DemoPayroll } from "./DemoPayroll";
+export { default as DemoSettings } from "./DemoSettings";
+export { default as DemoWorkspaceProjects } from "./DemoWorkspaceProjects";
+export { default as DemoWorkspaceTasks } from "./DemoWorkspaceTasks";
+export { default as DemoWorkspaceMessages } from "./DemoWorkspaceMessages";
+export { default as DemoWorkspaceTimesheets } from "./DemoWorkspaceTimesheets";
+export { default as DemoWorkspaceProjectDetail } from "./DemoWorkspaceProjectDetail";
