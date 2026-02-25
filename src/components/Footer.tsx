@@ -11,9 +11,12 @@ const Footer = () => {
       <div className="max-w-[1400px] mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="font-syne text-4xl font-extrabold bg-gradient-to-r from-purple-500 to-cyan-400 text-transparent bg-clip-text mb-4">
-              AIZEN
-            </h3>
+            <img
+              src="/logo.png"
+              alt="AIZEN"
+              className="h-10 md:h-12 object-contain mb-6"
+              loading="lazy"
+            />
             <p className="text-white/60 text-lg max-w-[400px] leading-relaxed">
               We design, build, and deploy custom artificial intelligence
               operations systems for aggressive scaling businesses. Period.

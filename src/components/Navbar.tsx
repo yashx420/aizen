@@ -35,6 +35,8 @@ const Navbar = () => {
               src="/logo.png"
               alt="AIZEN"
               className="h-8 md:h-10 object-contain"
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
 
