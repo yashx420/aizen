@@ -120,6 +120,10 @@ export function initCalculator(element: HTMLElement) {
           font-family: 'JetBrains Mono', monospace;
           font-weight: bold;
           font-size: 14px;
+          font-variant-numeric: tabular-nums;
+          min-width: 70px;
+          text-align: right;
+          display: inline-block;
         }
         input[type=range] {
           -webkit-appearance: none;
@@ -160,6 +164,7 @@ export function initCalculator(element: HTMLElement) {
           flex-direction: column;
           justify-content: center;
           transition: background 0.4s;
+          min-height: 420px;
         }
         .calc-results:hover {
           background: rgba(0,0,0,0.6);
@@ -177,6 +182,9 @@ export function initCalculator(element: HTMLElement) {
           font-weight: 800;
           color: white;
           margin-bottom: 1.5rem;
+          font-variant-numeric: tabular-nums;
+          min-height: 58px;
+          white-space: nowrap;
         }
         .breakdown-row {
           display: flex;
@@ -189,6 +197,9 @@ export function initCalculator(element: HTMLElement) {
         .breakdown-row span:last-child {
           font-family: 'JetBrains Mono', monospace;
           color: white;
+          font-variant-numeric: tabular-nums;
+          min-width: 120px;
+          text-align: right;
         }
         .btn-calc {
           width: 100%;
