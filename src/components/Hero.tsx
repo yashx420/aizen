@@ -6,10 +6,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const container = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!container.current || !glowRef.current) return;
+    if (!container.current || !contentRef.current || !glowRef.current) return;
 
     // Detect if we should use mouse tracking (disable on mobile/touch)
     const isMobile =
@@ -45,40 +46,45 @@ const Hero = () => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
 
-      // Clean text fade-in
+      // Massive text intro blast
       tl.from(".hero-char", {
-        y: 60,
+        y: 200,
         opacity: 0,
-        stagger: 0.03,
-        duration: 1,
-        ease: "power3.out",
+        rotateX: -90,
+        scale: 0.5,
+        stagger: 0.04,
+        duration: 1.5,
+        ease: "expo.out",
+        transformOrigin: "bottom center",
       })
         .from(
           ".hero-sub",
           {
-            y: 30,
+            y: 40,
             opacity: 0,
-            duration: 0.8,
+            duration: 1,
             ease: "power3.out",
           },
-          "-=0.6",
+          "-=0.8",
         )
         .from(
           ".hero-btn",
           {
-            y: 20,
+            scale: 0,
             opacity: 0,
             stagger: 0.1,
-            ease: "power3.out",
-            duration: 0.6,
+            ease: "back.out(1.5)",
+            duration: 0.8,
           },
-          "-=0.4",
+          "-=0.6",
         );
 
-      // Scroll triggered fade out
+      // Scroll triggered 3D push back and blur
       gsap.to(".hero-content", {
+        scale: 0.7,
         opacity: 0,
-        y: -80,
+        filter: "blur(20px)",
+        y: 200,
         scrollTrigger: {
           trigger: container.current,
           start: "top top",
@@ -123,25 +129,28 @@ const Hero = () => {
         }}
       />
 
-      {/* Subtle Tracking Glow Orb */}
+      {/* 3D Tracking Glow Orb */}
       <div
         ref={glowRef}
         className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none z-0"
         style={{
           background:
-            "radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, rgba(94, 25, 225, 0.06) 40%, transparent 70%)",
-          filter: "blur(50px)",
+            "radial-gradient(circle, rgba(0, 255, 255, 0.15) 0%, rgba(94, 25, 225, 0.1) 40%, transparent 70%)",
+          filter: "blur(40px)",
           mixBlendMode: "screen",
         }}
       />
 
-      {/* Clean Minimal Typography */}
-      <div className="hero-content relative z-10 text-center max-w-[1100px] mx-auto w-full flex flex-col items-center">
-        <div className="font-jetbrains text-cyan-primary tracking-[6px] uppercase text-xs font-medium mb-8 hero-sub">
+      {/* Heavy 3D Typography */}
+      <div
+        ref={contentRef}
+        className="hero-content relative z-10 text-center max-w-[1400px] mx-auto w-full flex flex-col items-center"
+      >
+        <div className="font-jetbrains text-cyan-primary tracking-[8px] uppercase text-sm font-bold mb-8 hero-sub">
           Aizen Operations OS
         </div>
 
-        <h1 className="font-dm-sans font-bold text-white mb-2 flex flex-wrap justify-center overflow-hidden leading-[1.05] pb-2 text-center text-3xl sm:text-5xl md:text-6xl lg:text-[72px] tracking-tight">
+        <h1 className="section-title text-glow mb-2 flex flex-wrap justify-center overflow-hidden leading-[1.1] pb-2 text-center text-4xl sm:text-5xl md:text-6xl lg:text-[80px]">
           {titleStr.split("").map((char, i) => (
             <span key={i} className="hero-char inline-block">
               {char === " " ? "\u00A0" : char}
@@ -149,7 +158,7 @@ const Hero = () => {
           ))}
         </h1>
 
-        <h1 className="font-dm-sans font-bold text-white/20 mb-10 flex flex-wrap justify-center overflow-hidden leading-[1.05] pb-4 text-center text-3xl sm:text-5xl md:text-6xl lg:text-[72px] tracking-tight">
+        <h1 className="section-title text-outline mb-10 flex flex-wrap justify-center overflow-hidden leading-[1.1] pb-4 text-center text-4xl sm:text-5xl md:text-6xl lg:text-[80px]">
           {titleStr2.split("").map((char, i) => (
             <span key={i} className="hero-char inline-block">
               {char === " " ? "\u00A0" : char}
