@@ -20,6 +20,9 @@ function LandingPage() {
   const calcRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Force scroll to top on reload/mount
+    window.scrollTo(0, 0);
+
     if (calcRef.current) {
       initCalculator(calcRef.current);
     }
