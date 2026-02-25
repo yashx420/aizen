@@ -6,11 +6,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const container = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!container.current || !contentRef.current || !glowRef.current) return;
+    if (!container.current || !glowRef.current) return;
 
     // Detect if we should use mouse tracking (disable on mobile/touch)
     const isMobile =
@@ -27,31 +26,13 @@ const Hero = () => {
       ease: "power3",
     });
 
-    // Quick setters for 3D tilt
-    const rotateXTo = gsap.quickTo(contentRef.current, "rotationX", {
-      duration: 0.5,
-      ease: "power2",
-    });
-    const rotateYTo = gsap.quickTo(contentRef.current, "rotationY", {
-      duration: 0.5,
-      ease: "power2",
-    });
-
     const handleMouseMove = (e: MouseEvent) => {
       if (isMobile) return;
       const { clientX, clientY } = e;
-      const { innerWidth, innerHeight } = window;
 
       // Move glow orb (center it on cursor)
       xTo(clientX - 200);
       yTo(clientY - 200);
-
-      // Calculate rotation for 3D tilt effect (subtle)
-      const forceX = (clientX / innerWidth - 0.5) * 2; // -1 to 1
-      const forceY = (clientY / innerHeight - 0.5) * 2; // -1 to 1
-
-      rotateYTo(forceX * 10); // Max 10 degrees tilt on X axis
-      rotateXTo(-forceY * 10); // Max -10 degrees tilt on Y axis
     };
 
     if (!isMobile) {
@@ -61,58 +42,43 @@ const Hero = () => {
       gsap.set(glowRef.current, { display: "none" });
     }
 
-    // Reset on mouse leave
-    const handleMouseLeave = () => {
-      if (isMobile) return;
-      rotateXTo(0);
-      rotateYTo(0);
-    };
-    if (!isMobile) {
-      container.current.addEventListener("mouseleave", handleMouseLeave);
-    }
-
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
 
-      // Massive text intro blast
+      // Clean text fade-in
       tl.from(".hero-char", {
-        y: 200,
+        y: 60,
         opacity: 0,
-        rotateX: -90,
-        scale: 0.5,
-        stagger: 0.04,
-        duration: 1.5,
-        ease: "expo.out",
-        transformOrigin: "bottom center",
+        stagger: 0.03,
+        duration: 1,
+        ease: "power3.out",
       })
         .from(
           ".hero-sub",
           {
-            y: 40,
+            y: 30,
             opacity: 0,
-            duration: 1,
+            duration: 0.8,
             ease: "power3.out",
           },
-          "-=0.8",
+          "-=0.6",
         )
         .from(
           ".hero-btn",
           {
-            scale: 0,
+            y: 20,
             opacity: 0,
             stagger: 0.1,
-            ease: "back.out(1.5)",
-            duration: 0.8,
+            ease: "power3.out",
+            duration: 0.6,
           },
-          "-=0.6",
+          "-=0.4",
         );
 
-      // Scroll triggered 3D push back and blur
+      // Scroll triggered fade out
       gsap.to(".hero-content", {
-        scale: 0.7,
         opacity: 0,
-        filter: "blur(20px)",
-        y: 200,
+        y: -80,
         scrollTrigger: {
           trigger: container.current,
           start: "top top",
@@ -123,14 +89,12 @@ const Hero = () => {
 
       // Initial state for tracker
       gsap.set(glowRef.current, { xPercent: -50, yPercent: -50 });
-      gsap.set(contentRef.current, { transformPerspective: 1000 });
     }, container);
 
     return () => {
       ctx.revert();
       if (container.current) {
         container.current.removeEventListener("mousemove", handleMouseMove);
-        container.current.removeEventListener("mouseleave", handleMouseLeave);
       }
     };
   }, []);
@@ -141,7 +105,7 @@ const Hero = () => {
   return (
     <section
       ref={container}
-      className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden perspective-[1000px]"
+      className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden"
     >
       {/* Background Grid Pattern */}
       <div
@@ -159,47 +123,35 @@ const Hero = () => {
         }}
       />
 
-      {/* 3D Tracking Glow Orb */}
+      {/* Subtle Tracking Glow Orb */}
       <div
         ref={glowRef}
         className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none z-0"
         style={{
           background:
-            "radial-gradient(circle, rgba(0, 255, 255, 0.15) 0%, rgba(94, 25, 225, 0.1) 40%, transparent 70%)",
-          filter: "blur(40px)",
+            "radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, rgba(94, 25, 225, 0.06) 40%, transparent 70%)",
+          filter: "blur(50px)",
           mixBlendMode: "screen",
         }}
       />
 
-      {/* Heavy 3D Typography */}
-      <div
-        ref={contentRef}
-        className="hero-content relative z-10 text-center max-w-[1400px] mx-auto w-full flex flex-col items-center will-change-transform"
-        style={{ transformStyle: "preserve-3d" }}
-      >
-        <div className="font-jetbrains text-cyan-primary tracking-[8px] uppercase text-sm font-bold mb-8 hero-sub">
+      {/* Clean Minimal Typography */}
+      <div className="hero-content relative z-10 text-center max-w-[1100px] mx-auto w-full flex flex-col items-center">
+        <div className="font-jetbrains text-cyan-primary tracking-[6px] uppercase text-xs font-medium mb-8 hero-sub">
           Aizen Operations OS
         </div>
 
-        <h1 className="section-title text-glow mb-2 flex flex-wrap justify-center overflow-hidden leading-[1.1] pb-2 text-center text-4xl sm:text-6xl md:text-7xl lg:text-[100px]">
+        <h1 className="font-dm-sans font-bold text-white mb-2 flex flex-wrap justify-center overflow-hidden leading-[1.05] pb-2 text-center text-3xl sm:text-5xl md:text-6xl lg:text-[72px] tracking-tight">
           {titleStr.split("").map((char, i) => (
-            <span
-              key={i}
-              className="hero-char inline-block"
-              style={{ perspective: 1000 }}
-            >
+            <span key={i} className="hero-char inline-block">
               {char === " " ? "\u00A0" : char}
             </span>
           ))}
         </h1>
 
-        <h1 className="section-title text-outline mb-10 flex flex-wrap justify-center overflow-hidden leading-[1.1] pb-4 text-center text-4xl sm:text-6xl md:text-7xl lg:text-[100px]">
+        <h1 className="font-dm-sans font-bold text-white/20 mb-10 flex flex-wrap justify-center overflow-hidden leading-[1.05] pb-4 text-center text-3xl sm:text-5xl md:text-6xl lg:text-[72px] tracking-tight">
           {titleStr2.split("").map((char, i) => (
-            <span
-              key={i}
-              className="hero-char inline-block"
-              style={{ perspective: 1000 }}
-            >
+            <span key={i} className="hero-char inline-block">
               {char === " " ? "\u00A0" : char}
             </span>
           ))}
