@@ -12,13 +12,13 @@ const steps = [
     num: "02",
     title: "THE PROTOTYPE",
     desc: "We build a working slice of your system. You test it for free. You decide.",
-    color: "#ff00ff",
+    color: "#8B5FD0",
   },
   {
     num: "03",
     title: "THE BUILD",
     desc: "10+ AI engineers deploy your production-ready system in under 90 days.",
-    color: "#00ffff",
+    color: "#3DBFBF",
   },
 ];
 
@@ -70,12 +70,12 @@ const ProcessCard = ({
         }}
       >
         <div
-          className="text-[60px] md:text-[80px] font-syne font-extrabold leading-none mb-4"
+          className="text-[60px] md:text-[80px] font-dm-sans font-extrabold leading-none mb-4"
           style={{ color: `${step.color}55` }}
         >
           {step.num}
         </div>
-        <h3 className="text-2xl md:text-3xl font-syne font-bold text-white mb-4 uppercase text-glow">
+        <h3 className="text-2xl md:text-3xl font-dm-sans font-bold text-white mb-4 uppercase text-glow">
           {step.title}
         </h3>
         <p className="text-text-muted">{step.desc}</p>
@@ -98,10 +98,10 @@ const Process = () => {
       className="relative w-full bg-[#050505] py-20 px-6"
     >
       <div className="text-center mb-20 relative z-20">
-        <h2 className="section-title text-[50px] md:text-[80px] font-bold text-white mb-4 shadow-cyan-400 leading-none">
+        <h2 className="section-title text-[50px] md:text-[80px] font-bold text-white mb-4  leading-none">
           HOW WE DOMINATE
         </h2>
-        <div className="font-jetbrains text-purple-400 tracking-[5px] uppercase text-sm">
+        <div className="font-dm-sans text-purple-400 tracking-[5px] uppercase text-sm">
           No BS. Just execution.
         </div>
       </div>
@@ -139,8 +139,8 @@ const Process = () => {
                 y2="100%"
               >
                 <stop offset="0%" stopColor="#8a2be2" />
-                <stop offset="50%" stopColor="#ff00ff" />
-                <stop offset="100%" stopColor="#00ffff" />
+                <stop offset="50%" stopColor="#8B5FD0" />
+                <stop offset="100%" stopColor="#3DBFBF" />
               </linearGradient>
             </defs>
           </svg>
@@ -149,7 +149,7 @@ const Process = () => {
         {/* Straight Vertical Line (Mobile) */}
         <div className="absolute top-0 left-[20px] w-1 h-full bg-white/5 md:hidden z-0 rounded-full overflow-hidden">
           <motion.div
-            className="w-full bg-gradient-to-b from-[#8a2be2] via-[#ff00ff] to-[#00ffff] origin-top"
+            className="w-full bg-gradient-to-b from-[#8a2be2] via-[#8B5FD0] to-[#3DBFBF] origin-top"
             style={{ scaleY: scrollYProgress, height: "100%" }}
           />
         </div>

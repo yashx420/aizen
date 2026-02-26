@@ -27,7 +27,7 @@ export function initCalculator(element: HTMLElement) {
           box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
         }
         .calc-header h2 {
-          font-family: 'Syne', sans-serif;
+          font-family: 'DM Sans', sans-serif;
           font-size: 32px;
           font-weight: 800;
           color: white;
@@ -53,7 +53,7 @@ export function initCalculator(element: HTMLElement) {
           margin-bottom: 1rem;
           text-transform: uppercase;
           letter-spacing: 2px;
-          font-family: 'JetBrains Mono', monospace;
+          font-family: 'DM Sans', sans-serif;
         }
         /* Buttons */
         .area-btn {
@@ -117,7 +117,7 @@ export function initCalculator(element: HTMLElement) {
         }
         .slider-val-highlight {
           color: white;
-          font-family: 'JetBrains Mono', monospace;
+          font-family: 'DM Sans', sans-serif;
           font-weight: bold;
           font-size: 14px;
           font-variant-numeric: tabular-nums;
@@ -198,7 +198,7 @@ export function initCalculator(element: HTMLElement) {
           margin-bottom: 0.5rem;
         }
         .total-waste {
-          font-family: 'JetBrains Mono', monospace;
+          font-family: 'DM Sans', sans-serif;
           font-size: 42px;
           font-weight: 800;
           color: white;
@@ -218,7 +218,7 @@ export function initCalculator(element: HTMLElement) {
           color: rgba(255,255,255,0.6);
         }
         .breakdown-row span:last-child {
-          font-family: 'JetBrains Mono', monospace;
+          font-family: 'DM Sans', sans-serif;
           color: white;
           font-variant-numeric: tabular-nums;
           min-width: 120px;
@@ -230,7 +230,7 @@ export function initCalculator(element: HTMLElement) {
           border-radius: 8px;
           background: white;
           color: black;
-          font-family: 'Syne', sans-serif;
+          font-family: 'DM Sans', sans-serif;
           font-weight: bold;
           font-size: 16px;
           text-transform: uppercase;
@@ -325,7 +325,7 @@ export function initCalculator(element: HTMLElement) {
             </div>
             
             <p style="font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 2rem; line-height: 1.5;">
-               A custom AI System from AIZEN eliminates SaaS sprawl and supercharges your <span id="dynamic-area-text" style="color: #00ffff; font-weight: bold;">Sales & Lead Gen</span>.
+               A custom AI System from AIZEN eliminates SaaS sprawl and supercharges your <span id="dynamic-area-text" style="color: #3DBFBF; font-weight: bold;">Sales & Lead Gen</span>.
             </p>
             
             <button class="btn-calc">Claim Your Free Audit</button>

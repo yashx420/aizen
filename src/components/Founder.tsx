@@ -67,7 +67,7 @@ const Founder = () => {
             <h2 className="section-title text-[40px] md:text-[60px] text-white mb-2 uppercase tracking-tight founder-line">
               Not Another Agency.
             </h2>
-            <div className="font-jetbrains text-purple-400 tracking-[3px] uppercase text-sm mb-10 founder-line">
+            <div className="font-dm-sans text-purple-400 tracking-[3px] uppercase text-sm mb-10 founder-line">
               The Engine Behind AIZEN
             </div>
 
@@ -81,7 +81,7 @@ const Founder = () => {
               <p className="founder-line">
                 I live in this space. I don't slap APIs together. I build deep,
                 resilient{" "}
-                <span className="text-cyan-400 font-bold glow-text">
+                <span className="text-cyan-primary font-bold glow-text">
                   production-grade systems.
                 </span>
               </p>

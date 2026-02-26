@@ -258,7 +258,7 @@ const DemoLayout = () => {
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#3DBFBF] to-[#5E19E1] flex items-center justify-center shrink-0">
               <span className="text-white font-bold text-sm">A</span>
             </div>
-            <span className="text-white font-syne font-bold text-lg whitespace-nowrap opacity-0 group-hover/sidebar:opacity-100 transition-opacity duration-300">
+            <span className="text-white font-dm-sans font-bold text-lg whitespace-nowrap opacity-0 group-hover/sidebar:opacity-100 transition-opacity duration-300">
               AIZEN CRM
             </span>
           </div>

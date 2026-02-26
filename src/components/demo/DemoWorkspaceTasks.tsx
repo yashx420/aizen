@@ -58,7 +58,7 @@ const DemoWorkspaceTasks = () => {
     <div className="max-w-[1000px] mx-auto">
       <div className="flex justify-between items-start mb-8">
         <div>
-          <h1 className="text-3xl font-syne font-bold text-white mb-1">
+          <h1 className="text-3xl font-dm-sans font-bold text-white mb-1">
             Tasks
           </h1>
           <p className="text-white/40 text-sm">

@@ -65,7 +65,7 @@ const FinalCta = () => {
       <div className="relative z-10 text-center max-w-[1000px] mx-auto w-full flex flex-col items-center">
         <div className="section-label cta-sub">EXECUTE TODAY</div>
 
-        <h2 className="font-syne text-[60px] md:text-[140px] font-black text-white leading-[0.85] uppercase mb-12 flex flex-col items-center mix-blend-screen mix-blend-difference z-20">
+        <h2 className="font-dm-sans text-[60px] md:text-[140px] font-black text-white leading-[0.85] uppercase mb-12 flex flex-col items-center mix-blend-screen mix-blend-difference z-20">
           <span className="cta-word inline-block tracking-tighter">BUILD</span>
           <span
             className="cta-word inline-block tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500"
@@ -80,7 +80,7 @@ const FinalCta = () => {
 
         <p className="cta-sub text-xl md:text-3xl text-white/80 font-dm-sans max-w-[800px] leading-relaxed mb-16 bg-black/40 backdrop-blur-md px-10 py-6 rounded-3xl border border-white/10">
           Tired of generic software? Sick of operational chaos? <br />
-          <span className="text-cyan-400 font-bold">
+          <span className="text-cyan-primary font-bold">
             Let's scope your custom AI system today.
           </span>
         </p>

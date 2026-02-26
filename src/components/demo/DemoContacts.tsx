@@ -60,7 +60,7 @@ const DemoContacts = () => {
     <div className="max-w-[1200px]">
       <div className="flex justify-between items-start mb-8">
         <div>
-          <h1 className="text-3xl font-syne font-bold text-white mb-1">
+          <h1 className="text-3xl font-dm-sans font-bold text-white mb-1">
             Contacts
           </h1>
           <p className="text-white/40 text-sm">

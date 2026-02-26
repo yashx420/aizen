@@ -544,7 +544,7 @@ const DemoWorkspaceProjectDetail = () => {
     <div className="flex flex-col h-full">
       {/* Header section (sticky/fixed at top of page content) */}
       <div className="shrink-0 border-b border-white/5 pb-4 mb-6">
-        <h1 className="text-4xl font-syne font-bold text-white tracking-tight mb-2">
+        <h1 className="text-4xl font-dm-sans font-bold text-white tracking-tight mb-2">
           {isTechCorp ? "TechCorp Website Redesign" : "Project Dashboard"}
         </h1>
         <div className="flex items-center gap-3 text-sm">

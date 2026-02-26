@@ -103,12 +103,12 @@ const Difference = () => {
               <h2 className="section-title text-[40px] md:text-[60px] text-outline uppercase tracking-tighter mix-blend-screen opacity-40 mb-4">
                 VS THE WORLD
               </h2>
-              <h3 className="font-syne text-[50px] md:text-[70px] font-bold text-red-500 mb-6 uppercase leading-none drop-shadow-[0_0_30px_rgba(255,0,0,0.4)]">
+              <h3 className="font-dm-sans text-[50px] md:text-[70px] font-bold text-red-main mb-6 uppercase leading-none drop-shadow-[0_0_30px_rgba(232,68,90,0.4)]">
                 Typical
                 <br />
                 Agencies.
               </h3>
-              <div className="w-16 h-1 bg-red-500 shadow-[0_0_20px_rgba(255,0,0,0.5)]" />
+              <div className="w-16 h-1 bg-red-main shadow-[0_0_20px_rgba(232,68,90,0.5)]" />
             </div>
 
             {/* Cyan State (AIZEN) */}
@@ -116,7 +116,7 @@ const Difference = () => {
               <h2 className="section-title text-[30px] md:text-[45px] text-outline uppercase tracking-tighter mix-blend-screen opacity-40 mb-4">
                 THE DIFFERENCE
               </h2>
-              <h3 className="font-syne text-[40px] md:text-[55px] font-bold text-cyan-400 mb-6 uppercase leading-none text-glow drop-shadow-[0_0_50px_rgba(0,255,255,0.4)]">
+              <h3 className="font-dm-sans text-[40px] md:text-[55px] font-bold text-cyan-primary mb-6 uppercase leading-none text-glow ">
                 Technical
                 <br />
                 Cofounders.
@@ -130,16 +130,16 @@ const Difference = () => {
         <div className="w-full md:w-[55%] lg:w-[50%] ml-auto pt-[50vh] md:pt-[100vh] pb-[20vh] flex flex-col z-20 perspective-[1000px] md:pl-12 lg:pl-16">
           {/* Bad Cards Section */}
           <div className="flex flex-col gap-6 w-full">
-            <h4 className="font-jetbrains font-bold text-red-500 text-xl tracking-[4px] mb-4 uppercase">
+            <h4 className="font-dm-sans font-bold text-red-main text-xl tracking-[4px] mb-4 uppercase">
               The Old Way
             </h4>
             {badCards.map((c, i) => (
               <div
                 key={i}
-                className="diff-card-item bento-box p-8 border-red-500/20 bg-red-950/20 shadow-[0_10px_30px_rgba(255,0,0,0.05)] origin-right"
+                className="diff-card-item bento-box p-8 border-red-main/20 bg-red-950/20 shadow-[0_10px_30px_rgba(232,68,90,0.05)] origin-right"
               >
                 <div className="flex gap-6 items-center">
-                  <div className="text-red-500 text-2xl font-bold bg-red-500/10 w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full border border-red-500/20">
+                  <div className="text-red-main text-2xl font-bold bg-red-main/10 w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full border border-red-main/20">
                     {c.icon}
                   </div>
                   <h4 className="text-base md:text-lg text-white/90 font-medium">
@@ -155,7 +155,7 @@ const Difference = () => {
 
           {/* Good Cards Section */}
           <div className="flex flex-col gap-6 w-full pb-[20vh]">
-            <h4 className="font-jetbrains font-bold text-cyan-400 text-xl tracking-[4px] mb-4 uppercase text-glow">
+            <h4 className="font-dm-sans font-bold text-cyan-primary text-xl tracking-[4px] mb-4 uppercase text-glow">
               The AIZEN Way
             </h4>
             {goodCards.map((c, i) => (
@@ -165,7 +165,7 @@ const Difference = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/5 to-cyan-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 <div className="flex gap-6 items-center relative z-10">
-                  <div className="text-cyan-400 text-2xl font-bold bg-cyan-400/20 w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full shadow-[0_0_15px_rgba(0,255,255,0.4)] border border-cyan-400/50">
+                  <div className="text-cyan-primary text-2xl font-bold bg-cyan-400/20 w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full shadow-[0_0_15px_rgba(0,255,255,0.4)] border border-cyan-400/50">
                     {c.icon}
                   </div>
                   <h4 className="text-base md:text-lg text-white font-bold">

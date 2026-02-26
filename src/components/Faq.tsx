@@ -65,7 +65,7 @@ const Faq = () => {
           <h2 className="section-title text-[50px] md:text-[70px] text-white uppercase font-bold leading-none mb-6 text-glow">
             THE
             <br />
-            <span className="text-cyan-400">HARD</span>
+            <span className="text-cyan-primary">HARD</span>
             <br />
             TRUTH.
           </h2>
@@ -87,7 +87,7 @@ const Faq = () => {
                 className="w-full text-left py-10 flex justify-between items-center bg-transparent cursor-pointer transition-colors duration-300 hover:bg-white/5 px-6"
               >
                 <h3
-                  className={`font-syne text-2xl md:text-4xl font-bold uppercase transition-colors duration-300 ${openIndex === i ? "text-cyan-400" : "text-white"}`}
+                  className={`font-dm-sans text-2xl md:text-4xl font-bold uppercase transition-colors duration-300 ${openIndex === i ? "text-cyan-primary" : "text-white"}`}
                 >
                   {faq.q}
                 </h3>
@@ -97,7 +97,7 @@ const Faq = () => {
                   className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 ml-6 group-hover:border-cyan-400/50 bg-black/40"
                 >
                   <span
-                    className={`text-2xl font-light ${openIndex === i ? "text-cyan-400" : "text-white"}`}
+                    className={`text-2xl font-light ${openIndex === i ? "text-cyan-primary" : "text-white"}`}
                   >
                     +
                   </span>

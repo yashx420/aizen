@@ -15,7 +15,7 @@ const DemoSettings = () => {
 
   return (
     <div className="max-w-[1200px]">
-      <h1 className="text-3xl font-syne font-bold text-white mb-1">
+      <h1 className="text-3xl font-dm-sans font-bold text-white mb-1">
         Company Settings
       </h1>
       <p className="text-white/40 text-sm mb-8">

@@ -77,10 +77,10 @@ const ServicesGrid = () => {
     >
       <div className="text-center mb-16">
         <div className="section-label justify-center">Our Arsenal</div>
-        <h2 className="font-syne text-[40px] md:text-[60px] font-bold text-white tracking-tight mb-4">
+        <h2 className="font-dm-sans text-[40px] md:text-[60px] font-bold text-white tracking-tight mb-4">
           OUR ARSENAL
         </h2>
-        <p className="font-jetbrains text-white/50 tracking-[4px] uppercase text-sm">
+        <p className="font-dm-sans text-white/50 tracking-[4px] uppercase text-sm">
           We don't build toys. We build weapons.
         </p>
       </div>
@@ -94,7 +94,7 @@ const ServicesGrid = () => {
             <div className="text-[36px] shrink-0">{svc.icon}</div>
 
             <div className="text-left">
-              <h3 className="font-syne text-[20px] font-bold text-white leading-tight uppercase tracking-tight">
+              <h3 className="font-dm-sans text-[20px] font-bold text-white leading-tight uppercase tracking-tight">
                 {svc.title}
               </h3>
               <p className="text-[14px] text-white/50 font-dm-sans leading-snug mt-1">

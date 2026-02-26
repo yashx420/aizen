@@ -43,7 +43,7 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 flex justify-between items-center">
-          <div className="font-syne font-extrabold text-[22px] tracking-[3px] bg-gradient-main text-transparent bg-clip-text flex items-center">
+          <div className="font-dm-sans font-extrabold text-[22px] tracking-[3px] bg-gradient-main text-transparent bg-clip-text flex items-center">
             <img
               src="/logo.png"
               alt="AIZEN"
@@ -110,7 +110,7 @@ const Navbar = () => {
                 handleSmoothScroll(e, link.href);
                 setIsOpen(false);
               }}
-              className="text-4xl font-syne font-bold text-white hover:text-[#3DBFBF] transition-colors"
+              className="text-4xl font-dm-sans font-bold text-white hover:text-[#3DBFBF] transition-colors"
             >
               {link.name}
             </a>

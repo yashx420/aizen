@@ -88,17 +88,17 @@ const Problem = () => {
 
       <div className="relative w-full max-w-[1400px] mx-auto perspective-[1500px] flex flex-col md:flex-row gap-6 items-stretch mt-0 md:-mt-10">
         {/* Camp 1: The Problem (Stays static on the left) */}
-        <div className="flex-1 bento-box border-red-500/20 bg-[#160a0a]/80 p-6 md:p-8 flex flex-col justify-center z-20 shadow-[0_0_50px_rgba(255,0,0,0.05)] h-fit my-auto">
-          <h3 className="font-syne text-[24px] md:text-[32px] font-bold text-white mb-4 leading-tight">
+        <div className="flex-1 bento-box border-red-main/20 bg-[#160a0a]/80 p-6 md:p-8 flex flex-col justify-center z-20 shadow-[0_0_50px_rgba(232,68,90,0.05)] h-fit my-auto">
+          <h3 className="font-dm-sans text-[24px] md:text-[32px] font-bold text-white mb-4 leading-tight">
             Camp 1: <br />
-            <span className="text-red-500">The Software Mess.</span>
+            <span className="text-red-main">The Software Mess.</span>
           </h3>
           <p className="text-sm md:text-base text-text-muted">
             You're duct-taping SaaS tools together. Make.com, Zapier, Hubspot,
             Trello, Google Sheets. The data refuses to sync. The team is burning
             20 hours a week on manual entry. Subscriptions cost thousands.
           </p>
-          <div className="mt-6 font-jetbrains text-xs text-red-400 font-bold uppercase tracking-[2px] animate-pulse">
+          <div className="mt-6 font-dm-sans text-xs text-red-400 font-bold uppercase tracking-[2px] animate-pulse">
             Scroll to wipe the slate →
           </div>
         </div>
@@ -129,7 +129,7 @@ const Problem = () => {
                 }}
               >
                 <div
-                  className="bad-chip-inner px-4 py-2 border border-red-500/30 bg-red-950/80 text-red-200 rounded-lg backdrop-blur-md shadow-[0_0_20px_rgba(255,0,0,0.1)] font-mono text-sm whitespace-nowrap"
+                  className="bad-chip-inner px-4 py-2 border border-red-main/30 bg-red-950/80 text-red-200 rounded-lg backdrop-blur-md shadow-[0_0_20px_rgba(232,68,90,0.1)] font-mono text-sm whitespace-nowrap"
                   style={{ transform: `rotate(${Math.random() * 40 - 20}deg)` }}
                 >
                   {chip}
@@ -150,7 +150,7 @@ const Problem = () => {
                 height="32"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#00ffff"
+                stroke="#3DBFBF"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -160,10 +160,10 @@ const Problem = () => {
                 <path d="M2 12l10 5 10-5" />
               </svg>
             </div>
-            <h3 className="font-syne text-[32px] md:text-[40px] font-bold text-white mb-3 md:mb-4 leading-none">
-              Camp 2: <span className="text-cyan-400 text-glow">AIZEN OS.</span>
+            <h3 className="font-dm-sans text-[32px] md:text-[40px] font-bold text-white mb-3 md:mb-4 leading-none">
+              Camp 2: <span className="text-cyan-primary text-glow">AIZEN OS.</span>
             </h3>
-            <p className="text-base md:text-lg text-cyan-100/70 leading-relaxed">
+            <p className="text-base md:text-lg text-white/60 leading-relaxed">
               One custom-built AI system. Your marketing, sales, and fulfillment
               live in one central dashboard. Zero double-entry. Infinite
               scalability.

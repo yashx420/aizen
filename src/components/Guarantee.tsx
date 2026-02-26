@@ -57,14 +57,14 @@ const Guarantee = () => {
         </div>
 
         <div className="relative z-10">
-          <div className="font-jetbrains font-bold tracking-[6px] text-purple-400 mb-6 uppercase text-sm border border-purple-500/30 inline-block px-8 py-3 rounded-[30px] bg-purple-500/10 shadow-[0_0_20px_rgba(138,43,226,0.3)]">
+          <div className="font-dm-sans font-bold tracking-[6px] text-purple-400 mb-6 uppercase text-sm border border-purple-500/30 inline-block px-8 py-3 rounded-[30px] bg-purple-500/10 shadow-[0_0_20px_rgba(138,43,226,0.3)]">
             THE ZERO-RISK PROTOCOL
           </div>
 
           <h2 className="guarantee-text-glitch section-title text-[40px] md:text-[60px] text-white font-bold mb-8 uppercase leading-[1.1]">
             PROVE US BEFORE
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-[#ff00ff]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-[#8B5FD0]">
               YOU PAY US.
             </span>
           </h2>
@@ -79,7 +79,7 @@ const Guarantee = () => {
 
           <Link
             to="/demo/dashboard"
-            className="btn-premium before:bg-gradient-to-r before:from-purple-600 before:to-[#ff00ff] border-purple-500/30 bg-purple-900/20 px-10 py-5 text-lg shadow-[0_0_30px_rgba(138,43,226,0.3)]"
+            className="btn-premium before:bg-gradient-to-r before:from-purple-600 before:to-[#8B5FD0] border-purple-500/30 bg-purple-900/20 px-10 py-5 text-lg shadow-[0_0_30px_rgba(138,43,226,0.3)]"
           >
             View Free Demo
           </Link>

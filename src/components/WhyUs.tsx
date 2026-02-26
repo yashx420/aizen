@@ -33,10 +33,10 @@ const WhyUs = () => {
       className="relative py-32 px-6 max-w-[1200px] mx-auto z-10"
     >
       <div className="flex flex-col items-center mb-24 text-center">
-        <h2 className="section-title text-[50px] md:text-[80px] bg-clip-text text-transparent bg-gradient-to-br from-white via-[#8a2be2] to-[#00ffff] mb-4 uppercase tracking-tighter">
+        <h2 className="section-title text-[50px] md:text-[80px] bg-clip-text text-transparent bg-gradient-to-br from-white via-[#8a2be2] to-[#3DBFBF] mb-4 uppercase tracking-tighter">
           THE UNFAIR ADVANTAGE
         </h2>
-        <div className="font-jetbrains text-cyan-400 tracking-[5px] uppercase text-sm bg-cyan-400/10 border border-cyan-400/20 px-6 py-2 rounded-full backdrop-blur-md">
+        <div className="font-dm-sans text-cyan-primary tracking-[5px] uppercase text-sm bg-cyan-400/10 border border-cyan-400/20 px-6 py-2 rounded-full backdrop-blur-md">
           Why Teams Beg To Work With Us
         </div>
       </div>
@@ -77,7 +77,7 @@ const WhyUs = () => {
             <div className="w-16 h-16 rounded-full bg-black/50 border border-white/10 flex items-center justify-center text-3xl mb-6 shadow-[0_0_20px_rgba(0,255,255,0.05)]">
               {item.icon}
             </div>
-            <h4 className="font-syne text-[18px] font-bold text-white mb-3">
+            <h4 className="font-dm-sans text-[18px] font-bold text-white mb-3">
               {item.title}
             </h4>
             <p className="text-[13px] text-text-muted leading-relaxed font-dm-sans">

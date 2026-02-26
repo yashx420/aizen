@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="relative pt-32 pb-10 px-6 border-t border-white/10 overflow-hidden z-10 bg-black">
       {/* Massive Background Logo via CSS Typography */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-syne text-[20vw] font-black text-white/5 select-none pointer-events-none text-center leading-none tracking-tighter w-full whitespace-nowrap z-0">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-dm-sans text-[20vw] font-black text-white/5 select-none pointer-events-none text-center leading-none tracking-tighter w-full whitespace-nowrap z-0">
         AIZEN OS
       </div>
 
@@ -24,14 +24,14 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-jetbrains font-bold text-white tracking-[4px] uppercase mb-6 text-sm">
+            <h4 className="font-dm-sans font-bold text-white tracking-[4px] uppercase mb-6 text-sm">
               Navigation
             </h4>
             <ul className="space-y-4 font-dm-sans text-lg">
               <li>
                 <a
                   href="#services"
-                  className="text-white/50 hover:text-cyan-400 transition-colors"
+                  className="text-white/50 hover:text-cyan-primary transition-colors"
                 >
                   Arsenal
                 </a>
@@ -39,7 +39,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#how"
-                  className="text-white/50 hover:text-cyan-400 transition-colors"
+                  className="text-white/50 hover:text-cyan-primary transition-colors"
                 >
                   Protocol
                 </a>
@@ -47,7 +47,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#results"
-                  className="text-white/50 hover:text-cyan-400 transition-colors"
+                  className="text-white/50 hover:text-cyan-primary transition-colors"
                 >
                   Proof
                 </a>
@@ -55,7 +55,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#faq"
-                  className="text-white/50 hover:text-cyan-400 transition-colors"
+                  className="text-white/50 hover:text-cyan-primary transition-colors"
                 >
                   Truth
                 </a>
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-jetbrains font-bold text-white tracking-[4px] uppercase mb-6 text-sm">
+            <h4 className="font-dm-sans font-bold text-white tracking-[4px] uppercase mb-6 text-sm">
               Social
             </h4>
             <ul className="space-y-4 font-dm-sans text-lg flex flex-col">
@@ -99,11 +99,11 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white/40 font-jetbrains text-sm">
+          <p className="text-white/40 font-dm-sans text-sm">
             © 2026 AIZEN. ALL SYSTEMS NOMINAL.
           </p>
 
-          <div className="flex gap-6 text-sm text-white/40 font-jetbrains">
+          <div className="flex gap-6 text-sm text-white/40 font-dm-sans">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>

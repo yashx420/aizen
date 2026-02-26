@@ -77,18 +77,18 @@ const Results = () => {
       className="relative py-32 px-6 max-w-[1200px] mx-auto z-10"
     >
       <div className="text-center mb-16">
-        <h2 className="font-syne text-[40px] md:text-[60px] font-bold text-white mb-2 tracking-tight">
+        <h2 className="font-dm-sans text-[40px] md:text-[60px] font-bold text-white mb-2 tracking-tight">
           THE PROOF
         </h2>
-        <div className="font-jetbrains text-white/50 tracking-[4px] uppercase text-sm">
+        <div className="font-dm-sans text-white/50 tracking-[4px] uppercase text-sm">
           Numbers don't lie.
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
         {[
-          { target: "121+", label: "Shipped Products", color: "#ff00ff" },
-          { target: "$224M+", label: "Client Revenue Added", color: "#00ffff" },
+          { target: "121+", label: "Shipped Products", color: "#8B5FD0" },
+          { target: "$224M+", label: "Client Revenue Added", color: "#3DBFBF" },
           { target: "100%", label: "Success Rate", color: "#8a2be2" },
         ].map((stat, i) => (
           <div
@@ -96,12 +96,12 @@ const Results = () => {
             className="text-center group border border-white/5 rounded-2xl p-8 hover:border-white/10 transition-colors bg-black/40"
           >
             <div
-              className="huge-counter font-syne text-[60px] md:text-[80px] font-bold text-white leading-none"
+              className="huge-counter font-dm-sans text-[60px] md:text-[80px] font-bold text-white leading-none"
               data-target={stat.target}
             >
               0
             </div>
-            <div className="font-jetbrains text-[12px] text-white/40 tracking-[2px] uppercase mt-4 group-hover:text-white/80 transition-colors">
+            <div className="font-dm-sans text-[12px] text-white/40 tracking-[2px] uppercase mt-4 group-hover:text-white/80 transition-colors">
               {stat.label}
             </div>
           </div>
@@ -171,10 +171,10 @@ const Results = () => {
             onClick={() => c.details && setActiveCase(c)}
             className={`project-card group flex flex-col p-6 md:p-8 rounded-2xl bg-[#0e0e12]/80 border border-white/5 transition-colors backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.2)] ${c.details ? "cursor-pointer hover:border-[#3DBFBF]/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(61,191,191,0.15)]" : "cursor-default"}`}
           >
-            <div className="font-jetbrains text-[10px] md:text-[11px] tracking-[2px] md:tracking-[3px] uppercase text-[#3DBFBF] mb-4 flex items-center gap-2">
+            <div className="font-dm-sans text-[10px] md:text-[11px] tracking-[2px] md:tracking-[3px] uppercase text-[#3DBFBF] mb-4 flex items-center gap-2">
               {c.tag}
             </div>
-            <h4 className="font-syne text-[18px] md:text-[20px] font-bold text-white mb-3 leading-tight group-hover:text-white/90 transition-colors">
+            <h4 className="font-dm-sans text-[18px] md:text-[20px] font-bold text-white mb-3 leading-tight group-hover:text-white/90 transition-colors">
               {c.title}
             </h4>
             <p className="text-[14px] md:text-[15px] text-[#8888A0] leading-relaxed">
@@ -213,10 +213,10 @@ const Results = () => {
                 </svg>
               </button>
 
-              <div className="font-jetbrains text-[12px] tracking-[3px] uppercase text-[#3DBFBF] mb-4">
+              <div className="font-dm-sans text-[12px] tracking-[3px] uppercase text-[#3DBFBF] mb-4">
                 {activeCase.tag}
               </div>
-              <h3 className="font-syne text-[32px] md:text-[40px] font-bold text-white mb-8 leading-tight">
+              <h3 className="font-dm-sans text-[32px] md:text-[40px] font-bold text-white mb-8 leading-tight">
                 {activeCase.title}
               </h3>
 

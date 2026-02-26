@@ -146,7 +146,7 @@ const Hero = () => {
         ref={contentRef}
         className="hero-content relative z-10 text-center max-w-[1400px] mx-auto w-full flex flex-col items-center"
       >
-        <div className="font-jetbrains text-cyan-primary tracking-[8px] uppercase text-sm font-bold mb-8 hero-sub">
+        <div className="font-dm-sans text-cyan-primary tracking-[8px] uppercase text-sm font-bold mb-8 hero-sub">
           Aizen Operations OS
         </div>
 
