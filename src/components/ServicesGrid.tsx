@@ -130,7 +130,7 @@ const ServicesGrid = () => {
       className="relative min-h-screen flex flex-col justify-center px-6 max-w-[1200px] mx-auto overflow-hidden text-center"
     >
       <div className="absolute top-10 left-0 w-full flex flex-col items-center justify-center z-10 pointer-events-none">
-        <h2 className="section-title text-[50px] md:text-[80px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/20 uppercase leading-none mix-blend-overlay">
+        <h2 className="section-title text-[50px] md:text-[80px] font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/20 uppercase leading-none mix-blend-overlay">
           OUR ARSENAL
         </h2>
         <div className="font-jetbrains text-white/50 font-bold tracking-[8px] uppercase mt-2">

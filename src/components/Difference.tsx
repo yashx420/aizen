@@ -103,7 +103,7 @@ const Difference = () => {
               <h2 className="section-title text-[40px] md:text-[60px] text-outline uppercase tracking-tighter mix-blend-screen opacity-40 mb-4">
                 VS THE WORLD
               </h2>
-              <h3 className="font-syne text-[50px] md:text-[70px] font-black text-red-500 mb-6 uppercase leading-none drop-shadow-[0_0_30px_rgba(255,0,0,0.4)]">
+              <h3 className="font-syne text-[50px] md:text-[70px] font-bold text-red-500 mb-6 uppercase leading-none drop-shadow-[0_0_30px_rgba(255,0,0,0.4)]">
                 Typical
                 <br />
                 Agencies.
@@ -116,7 +116,7 @@ const Difference = () => {
               <h2 className="section-title text-[30px] md:text-[45px] text-outline uppercase tracking-tighter mix-blend-screen opacity-40 mb-4">
                 THE DIFFERENCE
               </h2>
-              <h3 className="font-syne text-[40px] md:text-[55px] font-black text-cyan-400 mb-6 uppercase leading-none text-glow drop-shadow-[0_0_50px_rgba(0,255,255,0.4)]">
+              <h3 className="font-syne text-[40px] md:text-[55px] font-bold text-cyan-400 mb-6 uppercase leading-none text-glow drop-shadow-[0_0_50px_rgba(0,255,255,0.4)]">
                 Technical
                 <br />
                 Cofounders.

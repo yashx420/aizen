@@ -61,7 +61,7 @@ const Guarantee = () => {
             THE ZERO-RISK PROTOCOL
           </div>
 
-          <h2 className="guarantee-text-glitch section-title text-[40px] md:text-[60px] text-white font-extrabold mb-8 uppercase leading-[1.1]">
+          <h2 className="guarantee-text-glitch section-title text-[40px] md:text-[60px] text-white font-bold mb-8 uppercase leading-[1.1]">
             PROVE US BEFORE
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-[#ff00ff]">

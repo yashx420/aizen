@@ -62,7 +62,7 @@ const Faq = () => {
     >
       <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-24 mb-20">
         <div className="w-full md:w-[350px] sticky top-32 shrink-0">
-          <h2 className="section-title text-[50px] md:text-[70px] text-white uppercase font-extrabold leading-none mb-6 text-glow">
+          <h2 className="section-title text-[50px] md:text-[70px] text-white uppercase font-bold leading-none mb-6 text-glow">
             THE
             <br />
             <span className="text-cyan-400">HARD</span>
