@@ -141,10 +141,10 @@ const Problem = () => {
           {/* Camp 2: The Solution (Slides up next to Camp 1) */}
           <div
             ref={card2}
-            className="absolute inset-0 w-full h-full bento-box border-cyan-400/30 bg-[#051114]/90 p-6 md:p-8 flex flex-col items-center justify-center text-center z-30 shadow-[0_0_100px_rgba(0,255,255,0.15)] opacity-0"
+            className="absolute inset-0 w-full h-full bento-box border-[#5E19E1]/30 bg-[#0d0520]/90 p-6 md:p-8 flex flex-col items-center justify-center text-center z-30 shadow-[0_0_100px_rgba(94,25,225,0.15)] opacity-0"
           >
-            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-cyan-400/20 flex items-center justify-center mb-4 md:mb-6 border border-cyan-400/50 shadow-[0_0_40px_rgba(0,255,255,0.4)] relative">
-              <div className="absolute inset-0 bg-cyan-400 animate-ping opacity-20 rounded-full" />
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#5E19E1]/20 flex items-center justify-center mb-4 md:mb-6 border border-[#5E19E1]/50 shadow-[0_0_40px_rgba(94,25,225,0.4)] relative">
+              <div className="absolute inset-0 bg-[#5E19E1] animate-ping opacity-20 rounded-full" />
               <svg
                 width="32"
                 height="32"
@@ -161,7 +161,7 @@ const Problem = () => {
               </svg>
             </div>
             <h3 className="font-dm-sans text-[32px] md:text-[40px] font-bold text-white mb-3 md:mb-4 leading-none">
-              Camp 2: <span className="text-cyan-primary text-glow">AIZEN OS.</span>
+              Camp 2: <span className="text-[#5E19E1] text-glow">AIZEN OS.</span>
             </h3>
             <p className="text-base md:text-lg text-white/60 leading-relaxed">
               One custom-built AI system. Your marketing, sales, and fulfillment

@@ -31,7 +31,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#services"
-                  className="text-white/50 hover:text-cyan-primary transition-colors"
+                  className="text-white/50 hover:text-[#7B3FE4] transition-colors"
                 >
                   Arsenal
                 </a>
@@ -39,7 +39,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#how"
-                  className="text-white/50 hover:text-cyan-primary transition-colors"
+                  className="text-white/50 hover:text-[#7B3FE4] transition-colors"
                 >
                   Protocol
                 </a>
@@ -47,7 +47,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#results"
-                  className="text-white/50 hover:text-cyan-primary transition-colors"
+                  className="text-white/50 hover:text-[#7B3FE4] transition-colors"
                 >
                   Proof
                 </a>
@@ -55,7 +55,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#faq"
-                  className="text-white/50 hover:text-cyan-primary transition-colors"
+                  className="text-white/50 hover:text-[#7B3FE4] transition-colors"
                 >
                   Truth
                 </a>
@@ -71,7 +71,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center gap-3 text-white/50 hover:text-purple-400 transition-colors"
+                  className="flex items-center gap-3 text-white/50 hover:text-[#7B3FE4] transition-colors"
                 >
                   X (Twitter) ↗
                 </a>
@@ -81,7 +81,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/in/kanishk-jagwani-b81579134/"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-3 text-white/50 hover:text-purple-400 transition-colors"
+                  className="flex items-center gap-3 text-white/50 hover:text-[#7B3FE4] transition-colors"
                 >
                   LinkedIn ↗
                 </a>
@@ -89,7 +89,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="flex items-center gap-3 text-white/50 hover:text-purple-400 transition-colors"
+                  className="flex items-center gap-3 text-white/50 hover:text-[#7B3FE4] transition-colors"
                 >
                   Instagram ↗
                 </a>

@@ -36,7 +36,7 @@ const WhyUs = () => {
         <h2 className="section-title text-[50px] md:text-[80px] bg-clip-text text-transparent bg-gradient-to-br from-white via-[#8a2be2] to-[#5E19E1] mb-4 uppercase tracking-tighter">
           THE UNFAIR ADVANTAGE
         </h2>
-        <div className="font-dm-sans text-cyan-primary tracking-[5px] uppercase text-sm bg-cyan-400/10 border border-cyan-400/20 px-6 py-2 rounded-full backdrop-blur-md">
+        <div className="font-dm-sans text-[#5E19E1] tracking-[5px] uppercase text-sm bg-[#5E19E1]/10 border border-[#5E19E1]/20 px-6 py-2 rounded-full backdrop-blur-md">
           Why Teams Beg To Work With Us
         </div>
       </div>
@@ -71,10 +71,10 @@ const WhyUs = () => {
         ].map((item, i) => (
           <div
             key={i}
-            className={`why-card bento-box border-white/5 bg-[#0a0f12]/80 p-6 flex flex-col items-center text-center transition-all duration-300 hover:bg-cyan-900/20 hover:border-cyan-400/30 ${i === 4 ? "col-span-2 lg:col-span-1" : ""}`}
+            className={`why-card bento-box border-white/5 bg-[#0a0510]/80 p-6 flex flex-col items-center text-center transition-all duration-300 hover:bg-[#5E19E1]/20 hover:border-[#5E19E1]/30 ${i === 4 ? "col-span-2 lg:col-span-1" : ""}`}
             style={{ transformStyle: "preserve-3d" }}
           >
-            <div className="w-16 h-16 rounded-full bg-black/50 border border-white/10 flex items-center justify-center text-3xl mb-6 shadow-[0_0_20px_rgba(0,255,255,0.05)]">
+            <div className="w-16 h-16 rounded-full bg-black/50 border border-white/10 flex items-center justify-center text-3xl mb-6 shadow-[0_0_20px_rgba(94,25,225,0.05)]">
               {item.icon}
             </div>
             <h4 className="font-dm-sans text-[18px] font-bold text-white mb-3">

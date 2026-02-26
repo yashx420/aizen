@@ -47,24 +47,24 @@ const Guarantee = () => {
       ref={container}
       className="relative py-8 px-6 max-w-[1000px] mx-auto z-10 perspective-[1000px]"
     >
-      <div className="guarantee-box bento-box border-purple-500/50 bg-[#05020a]/90 p-12 md:p-20 text-center relative overflow-hidden shadow-[0_0_80px_rgba(138,43,226,0.15)] group hover:shadow-[0_0_120px_rgba(138,43,226,0.25)] transition-shadow duration-700">
+      <div className="guarantee-box bento-box border-[#5E19E1]/50 bg-[#05020a]/90 p-12 md:p-20 text-center relative overflow-hidden shadow-[0_0_80px_rgba(138,43,226,0.15)] group hover:shadow-[0_0_120px_rgba(138,43,226,0.25)] transition-shadow duration-700">
         {/* Radar Scanner Background */}
         <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-purple-500/30" />
-          <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-purple-500/30" />
-          <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-purple-500/50" />
-          <div className="absolute top-1/2 left-1/2 w-full h-[1px] bg-purple-500/50 -translate-y-1/2 origin-left animate-[spin_4s_linear_infinite]" />
+          <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#5E19E1]/30" />
+          <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#5E19E1]/30" />
+          <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#5E19E1]/50" />
+          <div className="absolute top-1/2 left-1/2 w-full h-[1px] bg-[#5E19E1]/50 -translate-y-1/2 origin-left animate-[spin_4s_linear_infinite]" />
         </div>
 
         <div className="relative z-10">
-          <div className="font-dm-sans font-bold tracking-[6px] text-purple-400 mb-6 uppercase text-sm border border-purple-500/30 inline-block px-8 py-3 rounded-[30px] bg-purple-500/10 shadow-[0_0_20px_rgba(138,43,226,0.3)]">
+          <div className="font-dm-sans font-bold tracking-[6px] text-[#5E19E1] mb-6 uppercase text-sm border border-[#5E19E1]/30 inline-block px-8 py-3 rounded-[30px] bg-[#5E19E1]/10 shadow-[0_0_20px_rgba(138,43,226,0.3)]">
             THE ZERO-RISK PROTOCOL
           </div>
 
           <h2 className="guarantee-text-glitch section-title text-[40px] md:text-[60px] text-white font-bold mb-8 uppercase leading-[1.1]">
             PROVE US BEFORE
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-[#8B5FD0]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5E19E1] to-[#8B5FD0]">
               YOU PAY US.
             </span>
           </h2>
@@ -79,7 +79,7 @@ const Guarantee = () => {
 
           <Link
             to="/demo/dashboard"
-            className="btn-premium before:bg-gradient-to-r before:from-purple-600 before:to-[#8B5FD0] border-purple-500/30 bg-purple-900/20 px-10 py-5 text-lg shadow-[0_0_30px_rgba(138,43,226,0.3)]"
+            className="btn-premium before:bg-gradient-to-r before:from-[#5E19E1] before:to-[#8B5FD0] border-[#5E19E1]/30 bg-[#5E19E1]/20 px-10 py-5 text-lg shadow-[0_0_30px_rgba(138,43,226,0.3)]"
           >
             View Free Demo
           </Link>

@@ -101,7 +101,7 @@ const Process = () => {
         <h2 className="section-title text-[50px] md:text-[80px] font-bold text-white mb-4  leading-none">
           HOW WE DOMINATE
         </h2>
-        <div className="font-dm-sans text-purple-400 tracking-[5px] uppercase text-sm">
+        <div className="font-dm-sans text-[#5E19E1] tracking-[5px] uppercase text-sm">
           No BS. Just execution.
         </div>
       </div>

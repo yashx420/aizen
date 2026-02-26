@@ -41,10 +41,10 @@ const Founder = () => {
       ref={container}
       className="relative py-12 px-6 max-w-[1000px] mx-auto z-10"
     >
-      <div className="bento-box bg-[#0a0510]/90 border-purple-500/20 p-12 md:p-20 relative overflow-hidden group">
+      <div className="bento-box bg-[#0a0510]/90 border-[#5E19E1]/20 p-12 md:p-20 relative overflow-hidden group">
         {/* Animated background noise & glow */}
         <div className="absolute -top-[200px] -right-[200px] w-[500px] h-[500px] bg-purple-600/20 blur-[120px] rounded-full pointer-events-none group-hover:bg-cyan-500/20 transition-colors duration-1000" />
-        <div className="absolute -bottom-[200px] -left-[200px] w-[500px] h-[500px] bg-cyan-600/20 blur-[120px] rounded-full pointer-events-none group-hover:bg-purple-500/20 transition-colors duration-1000" />
+        <div className="absolute -bottom-[200px] -left-[200px] w-[500px] h-[500px] bg-cyan-600/20 blur-[120px] rounded-full pointer-events-none group-hover:bg-[#5E19E1]/20 transition-colors duration-1000" />
 
         <div className="flex flex-col items-center md:items-start md:flex-row gap-16 relative z-10">
           {/* Animated SVG Badge / Founder Photo */}
@@ -52,14 +52,14 @@ const Founder = () => {
             <img
               src="/Kasnish Jagwani - CEO.png"
               alt="Kanishk Jagwani - CEO"
-              className="w-full h-full object-cover rounded-full border-2 border-purple-500/30 glow-shadow shadow-[0_0_30px_rgba(138,43,226,0.3)] relative z-10"
+              className="w-full h-full object-cover rounded-full border-2 border-[#5E19E1]/30 glow-shadow shadow-[0_0_30px_rgba(138,43,226,0.3)] relative z-10"
             />
 
             {/* Soft backdrop glow to blend the photo into the dark UI */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-cyan-500/20 rounded-full blur-md -z-10" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-[#5E19E1]/20 rounded-full blur-md -z-10" />
 
             {/* Spinning ring around the photo */}
-            <div className="absolute -inset-4 border border-white/10 border-t-cyan-400 rounded-full animate-[spin_10s_linear_infinite]" />
+            <div className="absolute -inset-4 border border-white/10 border-t-[#5E19E1] rounded-full animate-[spin_10s_linear_infinite]" />
             <div className="absolute -inset-2 border border-white/5 border-b-purple-500 rounded-full animate-[spin_8s_linear_infinite_reverse]" />
           </div>
 
@@ -67,7 +67,7 @@ const Founder = () => {
             <h2 className="section-title text-[40px] md:text-[60px] text-white mb-2 uppercase tracking-tight founder-line">
               Not Another Agency.
             </h2>
-            <div className="font-dm-sans text-purple-400 tracking-[3px] uppercase text-sm mb-10 founder-line">
+            <div className="font-dm-sans text-[#5E19E1] tracking-[3px] uppercase text-sm mb-10 founder-line">
               The Engine Behind AIZEN
             </div>
 
@@ -81,14 +81,14 @@ const Founder = () => {
               <p className="founder-line">
                 I live in this space. I don't slap APIs together. I build deep,
                 resilient{" "}
-                <span className="text-cyan-primary font-bold glow-text">
+                <span className="text-[#5E19E1] font-bold glow-text">
                   production-grade systems.
                 </span>
               </p>
               <p className="founder-line">
                 Too many businesses die from bad technical hires and operational
                 chaos. AIZEN is the antidote. We act as your{" "}
-                <span className="text-purple-400 font-bold">
+                <span className="text-[#5E19E1] font-bold">
                   Technical Cofounder,
                 </span>{" "}
                 not just a contractor.

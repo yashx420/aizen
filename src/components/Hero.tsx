@@ -135,7 +135,7 @@ const Hero = () => {
         className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none z-0"
         style={{
           background:
-            "radial-gradient(circle, rgba(0, 255, 255, 0.15) 0%, rgba(94, 25, 225, 0.1) 40%, transparent 70%)",
+            "radial-gradient(circle, rgba(94,25,225, 0.15) 0%, rgba(94, 25, 225, 0.1) 40%, transparent 70%)",
           filter: "blur(40px)",
           mixBlendMode: "screen",
         }}
@@ -146,7 +146,7 @@ const Hero = () => {
         ref={contentRef}
         className="hero-content relative z-10 text-center max-w-[1400px] mx-auto w-full flex flex-col items-center"
       >
-        <div className="font-dm-sans text-cyan-primary tracking-[8px] uppercase text-sm font-bold mb-8 hero-sub">
+        <div className="font-dm-sans text-[#5E19E1] tracking-[8px] uppercase text-sm font-bold mb-8 hero-sub">
           Aizen Operations OS
         </div>
 
@@ -171,11 +171,11 @@ const Hero = () => {
           <span className="text-white font-bold">AI operating systems,</span>{" "}
           intelligent apps, and automation workflows that replace your
           disconnected stack. Delivered in{" "}
-          <span className="text-cyan-primary">under 90 days.</span>
+          <span className="text-[#5E19E1]">under 90 days.</span>
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <button className="hero-btn btn-premium shadow-[0_0_40px_rgba(0,255,255,0.3)]">
+          <button className="hero-btn btn-premium shadow-[0_0_40px_rgba(94,25,225,0.3)]">
             <span>GET A FREE AUDIT</span>
             <svg
               width="24"

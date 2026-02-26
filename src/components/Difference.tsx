@@ -116,12 +116,12 @@ const Difference = () => {
               <h2 className="section-title text-[30px] md:text-[45px] text-outline uppercase tracking-tighter mix-blend-screen opacity-40 mb-4">
                 THE DIFFERENCE
               </h2>
-              <h3 className="font-dm-sans text-[40px] md:text-[55px] font-bold text-cyan-primary mb-6 uppercase leading-none text-glow ">
+              <h3 className="font-dm-sans text-[40px] md:text-[55px] font-bold text-[#5E19E1] mb-6 uppercase leading-none text-glow ">
                 Technical
                 <br />
                 Cofounders.
               </h3>
-              <div className="w-16 h-1 bg-cyan-400 shadow-[0_0_20px_rgba(0,255,255,0.5)]" />
+              <div className="w-16 h-1 bg-[#5E19E1] shadow-[0_0_20px_rgba(94,25,225,0.5)]" />
             </div>
           </div>
         </div>
@@ -155,17 +155,17 @@ const Difference = () => {
 
           {/* Good Cards Section */}
           <div className="flex flex-col gap-6 w-full pb-[20vh]">
-            <h4 className="font-dm-sans font-bold text-cyan-primary text-xl tracking-[4px] mb-4 uppercase text-glow">
+            <h4 className="font-dm-sans font-bold text-[#5E19E1] text-xl tracking-[4px] mb-4 uppercase text-glow">
               The AIZEN Way
             </h4>
             {goodCards.map((c, i) => (
               <div
                 key={i}
-                className="diff-card-item bento-box p-8 border-cyan-400/30 bg-cyan-950/30 shadow-[0_10px_30px_rgba(0,255,255,0.1)] origin-right group relative overflow-hidden"
+                className="diff-card-item bento-box p-8 border-[#5E19E1]/30 bg-[#1a0a3e]/30 shadow-[0_10px_30px_rgba(94,25,225,0.1)] origin-right group relative overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/5 to-cyan-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#5E19E1]/0 via-[#5E19E1]/5 to-[#5E19E1]/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 <div className="flex gap-6 items-center relative z-10">
-                  <div className="text-cyan-primary text-2xl font-bold bg-cyan-400/20 w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full shadow-[0_0_15px_rgba(0,255,255,0.4)] border border-cyan-400/50">
+                  <div className="text-[#5E19E1] text-2xl font-bold bg-[#5E19E1]/20 w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full shadow-[0_0_15px_rgba(94,25,225,0.4)] border border-[#5E19E1]/50">
                     {c.icon}
                   </div>
                   <h4 className="text-base md:text-lg text-white font-bold">
