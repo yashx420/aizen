@@ -31,8 +31,13 @@ function LandingPage() {
   return (
     <ReactLenis root options={{ lerp: 0.05, duration: 1.5, smoothWheel: true }}>
       <div className="relative min-h-screen">
-        {/* Main content wrapper - acts as the curtain */}
-        <div className="relative z-20 bg-[#050505] rounded-b-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
+        {/* Footer fixed at the bottom of viewport, hidden behind content */}
+        <div className="fixed bottom-0 left-0 right-0 z-10">
+          <Footer />
+        </div>
+
+        {/* Main content wrapper - acts as the curtain over the footer */}
+        <div className="relative z-20 bg-[#050505] rounded-b-[40px] shadow-[0_30px_80px_rgba(0,0,0,0.9)]">
           <div className="bg-grid" />
 
           <div className="ambient-orb bg-primary/40 w-[300px] h-[300px] md:w-[600px] md:h-[600px] top-0 left-[-150px] md:left-[-200px]" />
@@ -100,8 +105,8 @@ function LandingPage() {
           </main>
         </div>
 
-        {/* Footer is sticky behind the curtain */}
-        <Footer />
+        {/* Spacer to create scroll room for the fixed footer to be revealed */}
+        <div className="h-[500px] md:h-[600px]" />
       </div>
     </ReactLenis>
   );

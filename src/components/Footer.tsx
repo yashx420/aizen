@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="relative pt-32 pb-10 px-6 border-t border-white/10 overflow-hidden z-10 bg-[#050505] sticky bottom-0">
+    <footer className="relative pt-32 pb-10 px-6 border-t border-white/10 overflow-hidden bg-[#050505]">
       {/* Massive Background Logo via CSS Typography */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-dm-sans text-[20vw] font-black text-white/5 select-none pointer-events-none text-center leading-none tracking-tighter w-full whitespace-nowrap z-0">
         AIZEN OS
