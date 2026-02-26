@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,12 +14,24 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
+    { name: "Services", href: "#services-crazy" },
     { name: "How It Works", href: "#how" },
     { name: "Results", href: "#results" },
     { name: "About", href: "#about" },
     { name: "FAQ", href: "#faq" },
   ];
+
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <>
@@ -46,17 +59,18 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleSmoothScroll(e, link.href)}
                 className="text-white/60 hover:text-white text-sm font-medium transition-colors"
               >
                 {link.name}
               </a>
             ))}
-            <a
-              href="#cta"
+            <Link
+              to="/demo"
               className="bg-white text-black px-6 py-2.5 rounded-md text-sm font-semibold transition-opacity hover:opacity-90"
             >
-              See If You Qualify
-            </a>
+              See Free Demo
+            </Link>
           </div>
 
           {/* Mobile Toggle */}
@@ -92,19 +106,22 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                handleSmoothScroll(e, link.href);
+                setIsOpen(false);
+              }}
               className="text-4xl font-syne font-bold text-white hover:text-[#3DBFBF] transition-colors"
             >
               {link.name}
             </a>
           ))}
-          <a
-            href="#cta"
+          <Link
+            to="/demo"
             onClick={() => setIsOpen(false)}
             className="w-full bg-[#3DBFBF] text-black text-center py-4 rounded-xl font-bold text-lg"
           >
-            See If You Qualify
-          </a>
+            See Free Demo
+          </Link>
         </div>
       </div>
     </>
