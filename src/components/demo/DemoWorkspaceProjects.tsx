@@ -80,7 +80,7 @@ const DemoWorkspaceProjects = () => {
             className="bg-[#12121a] border border-white/5 rounded-2xl p-6 hover:border-white/10 transition-colors cursor-pointer group hover:bg-white/[0.02] block"
           >
             <div className="flex justify-between items-start mb-4">
-              <h3 className="text-lg font-semibold text-white group-hover:text-[#3DBFBF] transition-colors">
+              <h3 className="text-lg font-semibold text-white group-hover:text-[#5E19E1] transition-colors">
                 {p.name}
               </h3>
               <span className="text-xs text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
@@ -138,13 +138,13 @@ const DemoWorkspaceProjects = () => {
                 {p.team.map((t, j) => (
                   <div
                     key={j}
-                    className={`w-7 h-7 rounded-full border-2 border-[#12121a] flex items-center justify-center text-[10px] font-medium ${t.startsWith("+") ? "bg-white/10 text-white/40" : "bg-gradient-to-br from-[#3DBFBF] to-[#5E19E1] text-white"}`}
+                    className={`w-7 h-7 rounded-full border-2 border-[#12121a] flex items-center justify-center text-[10px] font-medium ${t.startsWith("+") ? "bg-white/10 text-white/40" : "bg-gradient-to-br from-[#5E19E1] to-[#5E19E1] text-white"}`}
                   >
                     {t}
                   </div>
                 ))}
               </div>
-              <span className="text-xs text-[#3DBFBF] flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs text-[#5E19E1] flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                 Open Dashboard{" "}
                 <svg
                   width="12"

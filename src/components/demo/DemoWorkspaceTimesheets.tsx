@@ -50,7 +50,7 @@ const DemoWorkspaceTimesheets = () => {
             Track and manage your time across all projects
           </p>
         </div>
-        <button className="px-5 py-2.5 bg-[#3DBFBF] text-black font-semibold text-sm rounded-xl hover:bg-[#3DBFBF]/90 transition-colors flex items-center gap-2">
+        <button className="px-5 py-2.5 bg-[#5E19E1] text-black font-semibold text-sm rounded-xl hover:bg-[#5E19E1]/90 transition-colors flex items-center gap-2">
           <span>+</span> Add Entry
         </button>
       </div>
@@ -105,7 +105,7 @@ const DemoWorkspaceTimesheets = () => {
                 className="border-b border-white/[0.03] hover:bg-white/[0.02] transition-colors group"
               >
                 <td className="py-4 px-5 text-sm text-white/40">{log.date}</td>
-                <td className="py-4 px-5 text-sm font-medium text-[#3DBFBF] hover:underline cursor-pointer">
+                <td className="py-4 px-5 text-sm font-medium text-[#5E19E1] hover:underline cursor-pointer">
                   {log.project}
                 </td>
                 <td className="py-4 px-5 text-sm text-white/70">{log.desc}</td>

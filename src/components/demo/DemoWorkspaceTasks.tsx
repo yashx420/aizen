@@ -65,7 +65,7 @@ const DemoWorkspaceTasks = () => {
             View and manage tasks across all your projects
           </p>
         </div>
-        <button className="px-5 py-2.5 bg-[#3DBFBF] text-black font-semibold text-sm rounded-xl hover:bg-[#3DBFBF]/90 transition-colors flex items-center gap-2">
+        <button className="px-5 py-2.5 bg-[#5E19E1] text-black font-semibold text-sm rounded-xl hover:bg-[#5E19E1]/90 transition-colors flex items-center gap-2">
           <span>+</span> Add Task
         </button>
       </div>
@@ -129,7 +129,7 @@ const DemoWorkspaceTasks = () => {
                 </span>
               </div>
               <span
-                className="text-sm text-[#3DBFBF] hover:underline"
+                className="text-sm text-[#5E19E1] hover:underline"
                 onClick={(e) => e.stopPropagation()}
               >
                 Open Project
@@ -145,10 +145,10 @@ const DemoWorkspaceTasks = () => {
                   >
                     <div className="flex items-center gap-3">
                       <div
-                        className={`w-5 h-5 rounded border flex items-center justify-center cursor-pointer ${task.status === "in-progress" ? "border-[#3DBFBF] bg-[#3DBFBF]/10" : "border-white/20"}`}
+                        className={`w-5 h-5 rounded border flex items-center justify-center cursor-pointer ${task.status === "in-progress" ? "border-[#5E19E1] bg-[#5E19E1]/10" : "border-white/20"}`}
                       >
                         {task.status === "in-progress" && (
-                          <div className="w-2.5 h-2.5 rounded-sm bg-[#3DBFBF]" />
+                          <div className="w-2.5 h-2.5 rounded-sm bg-[#5E19E1]" />
                         )}
                       </div>
                       <span

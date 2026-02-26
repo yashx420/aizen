@@ -107,7 +107,7 @@ const DemoTransactions = () => {
           <button className="px-4 py-2.5 bg-[#12121a] border border-white/10 text-white/60 text-sm rounded-xl hover:bg-white/5 transition-colors">
             Import CSV
           </button>
-          <button className="px-5 py-2.5 bg-[#3DBFBF] text-black font-semibold text-sm rounded-xl hover:bg-[#3DBFBF]/90 transition-colors">
+          <button className="px-5 py-2.5 bg-[#5E19E1] text-black font-semibold text-sm rounded-xl hover:bg-[#5E19E1]/90 transition-colors">
             + Add Transaction
           </button>
         </div>
@@ -121,7 +121,7 @@ const DemoTransactions = () => {
             className="bg-[#12121a] border border-white/5 rounded-2xl p-5"
           >
             <div className="flex justify-between items-start mb-3">
-              <div className="w-9 h-9 rounded-xl bg-[#3DBFBF]/10 flex items-center justify-center text-[#3DBFBF] text-sm">
+              <div className="w-9 h-9 rounded-xl bg-[#5E19E1]/10 flex items-center justify-center text-[#5E19E1] text-sm">
                 {m.icon}
               </div>
               <span

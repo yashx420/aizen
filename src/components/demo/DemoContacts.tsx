@@ -67,7 +67,7 @@ const DemoContacts = () => {
             Manage all your customer and supplier contacts in one place.
           </p>
         </div>
-        <button className="px-5 py-2.5 bg-[#3DBFBF] text-black font-semibold text-sm rounded-xl hover:bg-[#3DBFBF]/90 transition-colors flex items-center gap-2">
+        <button className="px-5 py-2.5 bg-[#5E19E1] text-black font-semibold text-sm rounded-xl hover:bg-[#5E19E1]/90 transition-colors flex items-center gap-2">
           <span>+</span> New Contact
         </button>
       </div>
@@ -80,7 +80,7 @@ const DemoContacts = () => {
             onClick={() => setActiveTab(i)}
             className={`pb-3 text-sm font-medium transition-colors border-b-2 ${
               activeTab === i
-                ? "text-[#3DBFBF] border-[#3DBFBF]"
+                ? "text-[#5E19E1] border-[#5E19E1]"
                 : "text-white/40 border-transparent hover:text-white/60"
             }`}
           >

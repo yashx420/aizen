@@ -43,7 +43,7 @@ const DemoWorkspaceProjectDetail = () => {
                     $45,000
                   </div>
                   <div className="mt-2 h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                    <div className="h-full bg-[#3DBFBF] w-[45%]" />
+                    <div className="h-full bg-[#5E19E1] w-[45%]" />
                   </div>
                 </div>
                 <div className="p-4 bg-white/[0.02] border border-white/5 rounded-xl">
@@ -506,7 +506,7 @@ const DemoWorkspaceProjectDetail = () => {
               ].map((member, i) => (
                 <div
                   key={i}
-                  className="bg-[#12121a] border border-white/5 rounded-2xl p-6 flex flex-col items-center group hover:border-[#3DBFBF]/30 transition-colors"
+                  className="bg-[#12121a] border border-white/5 rounded-2xl p-6 flex flex-col items-center group hover:border-[#5E19E1]/30 transition-colors"
                 >
                   <img
                     src={`https://i.pravatar.cc/150?img=${i + 1}`}
@@ -516,7 +516,7 @@ const DemoWorkspaceProjectDetail = () => {
                   <h3 className="text-white font-medium text-center">
                     {member.name}
                   </h3>
-                  <p className="text-[#3DBFBF] text-xs font-medium mb-1">
+                  <p className="text-[#5E19E1] text-xs font-medium mb-1">
                     {member.role}
                   </p>
                   <p className="text-white/40 text-[10px]">{member.email}</p>
@@ -566,13 +566,13 @@ const DemoWorkspaceProjectDetail = () => {
               onClick={() => setActiveTab(tab)}
               className={`pb-3 text-sm font-medium transition-colors relative ${
                 activeTab === tab
-                  ? "text-[#3DBFBF]"
+                  ? "text-[#5E19E1]"
                   : "text-white/50 hover:text-white/80"
               }`}
             >
               {tab}
               {activeTab === tab && (
-                <div className="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#3DBFBF]" />
+                <div className="absolute bottom-[-1px] left-0 w-full h-[2px] bg-[#5E19E1]" />
               )}
             </button>
           ))}

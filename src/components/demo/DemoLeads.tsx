@@ -116,7 +116,7 @@ const DemoLeads = () => {
             Track and manage your sales opportunities through stages
           </p>
         </div>
-        <button className="px-5 py-2.5 bg-[#3DBFBF] text-black font-semibold text-sm rounded-xl hover:bg-[#3DBFBF]/90 transition-colors flex items-center gap-2">
+        <button className="px-5 py-2.5 bg-[#5E19E1] text-black font-semibold text-sm rounded-xl hover:bg-[#5E19E1]/90 transition-colors flex items-center gap-2">
           <span>+</span> New Lead
         </button>
       </div>

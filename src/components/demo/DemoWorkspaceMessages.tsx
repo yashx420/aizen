@@ -35,7 +35,7 @@ const DemoWorkspaceMessages = () => {
             {channels.map((c, i) => (
               <div
                 key={i}
-                className={`px-2 py-1.5 rounded-lg flex items-center gap-2 cursor-pointer text-sm ${i === 0 ? "bg-[#3DBFBF]/10 text-[#3DBFBF] font-medium" : "text-white/50 hover:bg-white/5 transition-colors"}`}
+                className={`px-2 py-1.5 rounded-lg flex items-center gap-2 cursor-pointer text-sm ${i === 0 ? "bg-[#5E19E1]/10 text-[#5E19E1] font-medium" : "text-white/50 hover:bg-white/5 transition-colors"}`}
               >
                 <span className="text-white/20">#</span> {c}
               </div>
@@ -107,7 +107,7 @@ const DemoWorkspaceMessages = () => {
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              className="text-[#3DBFBF]"
+              className="text-[#5E19E1]"
             >
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
             </svg>
@@ -123,7 +123,7 @@ const DemoWorkspaceMessages = () => {
 
         {/* Input Area */}
         <div className="p-4 border-t border-white/5 bg-[#0e0e14]">
-          <div className="bg-[#12121a] border border-white/10 rounded-xl overflow-hidden focus-within:border-[#3DBFBF]/50 transition-colors">
+          <div className="bg-[#12121a] border border-white/10 rounded-xl overflow-hidden focus-within:border-[#5E19E1]/50 transition-colors">
             <div className="flex items-center gap-2 px-3 py-2 border-b border-white/5 text-white/30">
               <button className="p-1 hover:text-white/70 hover:bg-white/5 rounded">
                 <svg
@@ -175,7 +175,7 @@ const DemoWorkspaceMessages = () => {
             <span className="text-[10px] text-white/30">
               Press Enter to send
             </span>
-            <button className="bg-[#3DBFBF] text-black w-8 h-8 rounded-lg flex items-center justify-center hover:bg-[#3DBFBF]/90 transition-colors">
+            <button className="bg-[#5E19E1] text-black w-8 h-8 rounded-lg flex items-center justify-center hover:bg-[#5E19E1]/90 transition-colors">
               <svg
                 width="14"
                 height="14"

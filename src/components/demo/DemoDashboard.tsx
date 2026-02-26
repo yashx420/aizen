@@ -139,7 +139,7 @@ const DemoDashboard = () => {
               {["12m", "3m", "30d", "7d", "24h"].map((t, i) => (
                 <button
                   key={t}
-                  className={`px-3 py-1 text-xs rounded-lg transition-colors ${i === 0 ? "bg-[#3DBFBF]/15 text-[#3DBFBF]" : "text-white/30 hover:text-white/60 hover:bg-white/5"}`}
+                  className={`px-3 py-1 text-xs rounded-lg transition-colors ${i === 0 ? "bg-[#5E19E1]/15 text-[#5E19E1]" : "text-white/30 hover:text-white/60 hover:bg-white/5"}`}
                 >
                   {t}
                 </button>
@@ -162,7 +162,7 @@ const DemoDashboard = () => {
             <path
               d={linePath}
               fill="none"
-              stroke="#3DBFBF"
+              stroke="#5E19E1"
               strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -175,13 +175,13 @@ const DemoDashboard = () => {
             />
             <defs>
               <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#3DBFBF" />
+                <stop offset="0%" stopColor="#5E19E1" />
                 <stop offset="100%" stopColor="transparent" />
               </linearGradient>
             </defs>
             {/* Dots */}
             {points.map((p, i) => (
-              <circle key={i} cx={p.x} cy={p.y} r="3" fill="#3DBFBF" />
+              <circle key={i} cx={p.x} cy={p.y} r="3" fill="#5E19E1" />
             ))}
             {/* Month labels */}
             {months.map((m, i) => (

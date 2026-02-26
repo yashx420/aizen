@@ -88,7 +88,7 @@ const Results = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
         {[
           { target: "121+", label: "Shipped Products", color: "#8B5FD0" },
-          { target: "$224M+", label: "Client Revenue Added", color: "#3DBFBF" },
+          { target: "$224M+", label: "Client Revenue Added", color: "#5E19E1" },
           { target: "100%", label: "Success Rate", color: "#8a2be2" },
         ].map((stat, i) => (
           <div
@@ -169,9 +169,9 @@ const Results = () => {
           <div
             key={i}
             onClick={() => c.details && setActiveCase(c)}
-            className={`project-card group flex flex-col p-6 md:p-8 rounded-2xl bg-[#0e0e12]/80 border border-white/5 transition-colors backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.2)] ${c.details ? "cursor-pointer hover:border-[#3DBFBF]/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(61,191,191,0.15)]" : "cursor-default"}`}
+            className={`project-card group flex flex-col p-6 md:p-8 rounded-2xl bg-[#0e0e12]/80 border border-white/5 transition-colors backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.2)] ${c.details ? "cursor-pointer hover:border-[#5E19E1]/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(61,191,191,0.15)]" : "cursor-default"}`}
           >
-            <div className="font-dm-sans text-[10px] md:text-[11px] tracking-[2px] md:tracking-[3px] uppercase text-[#3DBFBF] mb-4 flex items-center gap-2">
+            <div className="font-dm-sans text-[10px] md:text-[11px] tracking-[2px] md:tracking-[3px] uppercase text-[#5E19E1] mb-4 flex items-center gap-2">
               {c.tag}
             </div>
             <h4 className="font-dm-sans text-[18px] md:text-[20px] font-bold text-white mb-3 leading-tight group-hover:text-white/90 transition-colors">
@@ -179,7 +179,7 @@ const Results = () => {
             </h4>
             <p className="text-[14px] md:text-[15px] text-[#8888A0] leading-relaxed">
               {c.desc}{" "}
-              <span className="text-[#3DBFBF] font-medium">{c.highlight}</span>
+              <span className="text-[#5E19E1] font-medium">{c.highlight}</span>
             </p>
           </div>
         ))}
@@ -196,7 +196,7 @@ const Results = () => {
               className="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer"
               onClick={() => setActiveCase(null)}
             />
-            <div className="relative bg-[#0b0b0f] border border-[#3DBFBF]/30 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 md:p-12 shadow-[0_0_50px_rgba(61,191,191,0.15)] animate-in fade-in zoom-in duration-300">
+            <div className="relative bg-[#0b0b0f] border border-[#5E19E1]/30 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 md:p-12 shadow-[0_0_50px_rgba(61,191,191,0.15)] animate-in fade-in zoom-in duration-300">
               <button
                 onClick={() => setActiveCase(null)}
                 className="absolute top-6 right-6 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 p-2 rounded-full transition-colors"
@@ -213,7 +213,7 @@ const Results = () => {
                 </svg>
               </button>
 
-              <div className="font-dm-sans text-[12px] tracking-[3px] uppercase text-[#3DBFBF] mb-4">
+              <div className="font-dm-sans text-[12px] tracking-[3px] uppercase text-[#5E19E1] mb-4">
                 {activeCase.tag}
               </div>
               <h3 className="font-dm-sans text-[32px] md:text-[40px] font-bold text-white mb-8 leading-tight">
@@ -246,8 +246,8 @@ const Results = () => {
                     <p className="text-sm">{activeCase.details.challenge}</p>
                   </div>
 
-                  <div className="bg-[#3DBFBF]/10 p-6 rounded-2xl border border-[#3DBFBF]/20">
-                    <h4 className="text-[#3DBFBF] font-bold mb-2 uppercase tracking-wide text-sm flex items-center gap-2">
+                  <div className="bg-[#5E19E1]/10 p-6 rounded-2xl border border-[#5E19E1]/20">
+                    <h4 className="text-[#5E19E1] font-bold mb-2 uppercase tracking-wide text-sm flex items-center gap-2">
                       <svg
                         width="16"
                         height="16"
@@ -268,7 +268,7 @@ const Results = () => {
                   <h4 className="text-white font-bold mb-2 uppercase tracking-wide text-sm border-b border-white/10 pb-2 inline-block">
                     The Results
                   </h4>
-                  <p className="text-[#3DBFBF] font-medium">
+                  <p className="text-[#5E19E1] font-medium">
                     {activeCase.details.results}
                   </p>
                 </div>

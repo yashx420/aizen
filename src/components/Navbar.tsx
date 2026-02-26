@@ -110,7 +110,7 @@ const Navbar = () => {
                 handleSmoothScroll(e, link.href);
                 setIsOpen(false);
               }}
-              className="text-4xl font-dm-sans font-bold text-white hover:text-[#3DBFBF] transition-colors"
+              className="text-4xl font-dm-sans font-bold text-white hover:text-[#5E19E1] transition-colors"
             >
               {link.name}
             </a>
@@ -118,7 +118,7 @@ const Navbar = () => {
           <Link
             to="/demo"
             onClick={() => setIsOpen(false)}
-            className="w-full bg-[#3DBFBF] text-black text-center py-4 rounded-xl font-bold text-lg"
+            className="w-full bg-[#5E19E1] text-black text-center py-4 rounded-xl font-bold text-lg"
           >
             See Free Demo
           </Link>

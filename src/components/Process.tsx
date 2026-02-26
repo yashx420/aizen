@@ -18,7 +18,7 @@ const steps = [
     num: "03",
     title: "THE BUILD",
     desc: "10+ AI engineers deploy your production-ready system in under 90 days.",
-    color: "#3DBFBF",
+    color: "#8B5FD0",
   },
 ];
 
@@ -140,7 +140,7 @@ const Process = () => {
               >
                 <stop offset="0%" stopColor="#8a2be2" />
                 <stop offset="50%" stopColor="#8B5FD0" />
-                <stop offset="100%" stopColor="#3DBFBF" />
+                <stop offset="100%" stopColor="#8B5FD0" />
               </linearGradient>
             </defs>
           </svg>
@@ -149,7 +149,7 @@ const Process = () => {
         {/* Straight Vertical Line (Mobile) */}
         <div className="absolute top-0 left-[20px] w-1 h-full bg-white/5 md:hidden z-0 rounded-full overflow-hidden">
           <motion.div
-            className="w-full bg-gradient-to-b from-[#8a2be2] via-[#8B5FD0] to-[#3DBFBF] origin-top"
+            className="w-full bg-gradient-to-b from-[#8a2be2] via-[#8B5FD0] to-[#8B5FD0] origin-top"
             style={{ scaleY: scrollYProgress, height: "100%" }}
           />
         </div>

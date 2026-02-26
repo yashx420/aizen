@@ -39,7 +39,7 @@ const DemoProjects = () => {
             Manage your projects and track financial progress
           </p>
         </div>
-        <button className="px-5 py-2.5 bg-[#3DBFBF] text-black font-semibold text-sm rounded-xl hover:bg-[#3DBFBF]/90 transition-colors flex items-center gap-2">
+        <button className="px-5 py-2.5 bg-[#5E19E1] text-black font-semibold text-sm rounded-xl hover:bg-[#5E19E1]/90 transition-colors flex items-center gap-2">
           <span>+</span> New Project
         </button>
       </div>
@@ -82,7 +82,7 @@ const DemoProjects = () => {
                 key={i}
                 className="border-b border-white/[0.03] hover:bg-white/[0.02] transition-colors"
               >
-                <td className="py-4 px-5 text-sm font-medium text-[#3DBFBF] cursor-pointer hover:underline">
+                <td className="py-4 px-5 text-sm font-medium text-[#5E19E1] cursor-pointer hover:underline">
                   {p.name}
                 </td>
                 <td className="py-4 px-5 text-sm text-white/50">{p.client}</td>

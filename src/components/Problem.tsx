@@ -150,7 +150,7 @@ const Problem = () => {
                 height="32"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#3DBFBF"
+                stroke="#5E19E1"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"

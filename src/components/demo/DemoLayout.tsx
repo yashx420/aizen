@@ -255,7 +255,7 @@ const DemoLayout = () => {
         <div>
           {/* Logo */}
           <div className="flex items-center gap-3 px-5 mb-6">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#3DBFBF] to-[#5E19E1] flex items-center justify-center shrink-0">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#5E19E1] to-[#5E19E1] flex items-center justify-center shrink-0">
               <span className="text-white font-bold text-sm">A</span>
             </div>
             <span className="text-white font-dm-sans font-bold text-lg whitespace-nowrap opacity-0 group-hover/sidebar:opacity-100 transition-opacity duration-300">
@@ -297,7 +297,7 @@ const DemoLayout = () => {
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 ${
                       isActive
-                        ? "bg-[#3DBFBF]/15 text-[#3DBFBF]"
+                        ? "bg-[#5E19E1]/15 text-[#5E19E1]"
                         : "text-white/40 hover:text-white/80 hover:bg-white/5"
                     }`
                   }
@@ -403,7 +403,7 @@ const DemoLayout = () => {
             className={({ isActive }) =>
               `flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 ${
                 isActive
-                  ? "bg-[#3DBFBF]/15 text-[#3DBFBF]"
+                  ? "bg-[#5E19E1]/15 text-[#5E19E1]"
                   : "text-white/40 hover:text-white/80 hover:bg-white/5"
               }`
             }
@@ -450,8 +450,8 @@ const DemoLayout = () => {
               </svg>
             </button>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-[#3DBFBF] animate-pulse" />
-              <span className="text-sm text-[#3DBFBF] font-medium whitespace-nowrap">
+              <div className="w-2 h-2 rounded-full bg-[#5E19E1] animate-pulse" />
+              <span className="text-sm text-[#5E19E1] font-medium whitespace-nowrap">
                 Demo Mode
               </span>
               <span className="hidden sm:inline text-sm text-white/30 ml-1">

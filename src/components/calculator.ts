@@ -325,7 +325,7 @@ export function initCalculator(element: HTMLElement) {
             </div>
             
             <p style="font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 2rem; line-height: 1.5;">
-               A custom AI System from AIZEN eliminates SaaS sprawl and supercharges your <span id="dynamic-area-text" style="color: #3DBFBF; font-weight: bold;">Sales & Lead Gen</span>.
+               A custom AI System from AIZEN eliminates SaaS sprawl and supercharges your <span id="dynamic-area-text" style="color: #5E19E1; font-weight: bold;">Sales & Lead Gen</span>.
             </p>
             
             <button class="btn-calc">Claim Your Free Audit</button>

@@ -33,7 +33,7 @@ const WhyUs = () => {
       className="relative py-32 px-6 max-w-[1200px] mx-auto z-10"
     >
       <div className="flex flex-col items-center mb-24 text-center">
-        <h2 className="section-title text-[50px] md:text-[80px] bg-clip-text text-transparent bg-gradient-to-br from-white via-[#8a2be2] to-[#3DBFBF] mb-4 uppercase tracking-tighter">
+        <h2 className="section-title text-[50px] md:text-[80px] bg-clip-text text-transparent bg-gradient-to-br from-white via-[#8a2be2] to-[#5E19E1] mb-4 uppercase tracking-tighter">
           THE UNFAIR ADVANTAGE
         </h2>
         <div className="font-dm-sans text-cyan-primary tracking-[5px] uppercase text-sm bg-cyan-400/10 border border-cyan-400/20 px-6 py-2 rounded-full backdrop-blur-md">

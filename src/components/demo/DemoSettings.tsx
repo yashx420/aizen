@@ -26,13 +26,13 @@ const DemoSettings = () => {
       <div className="bg-[#12121a] border border-white/5 rounded-2xl p-6 mb-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-[#3DBFBF]/10 border border-[#3DBFBF]/20 flex items-center justify-center">
+            <div className="w-14 h-14 rounded-2xl bg-[#5E19E1]/10 border border-[#5E19E1]/20 flex items-center justify-center">
               <svg
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#3DBFBF"
+                stroke="#5E19E1"
                 strokeWidth="1.5"
               >
                 <rect x="3" y="3" width="7" height="7" />
@@ -75,7 +75,7 @@ const DemoSettings = () => {
             onClick={() => setActiveTab(i)}
             className={`pb-3 text-sm font-medium transition-colors border-b-2 ${
               activeTab === i
-                ? "text-[#3DBFBF] border-[#3DBFBF]"
+                ? "text-[#5E19E1] border-[#5E19E1]"
                 : "text-white/40 border-transparent hover:text-white/60"
             }`}
           >
@@ -107,7 +107,7 @@ const DemoSettings = () => {
                 <label className="text-xs text-white/30 uppercase tracking-wider">
                   Website
                 </label>
-                <p className="text-sm text-[#3DBFBF] mt-1">
+                <p className="text-sm text-[#5E19E1] mt-1">
                   https://apexdigital.com
                 </p>
               </div>
