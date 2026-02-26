@@ -198,14 +198,16 @@ export function initCalculator(element: HTMLElement) {
           margin-bottom: 0.5rem;
         }
         .total-waste {
-          font-family: 'Syne', sans-serif;
-          font-size: 48px;
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 42px;
           font-weight: 800;
           color: white;
           margin-bottom: 1.5rem;
           font-variant-numeric: tabular-nums;
-          min-height: 58px;
+          height: 52px;
+          line-height: 52px;
           white-space: nowrap;
+          overflow: hidden;
         }
         .breakdown-row {
           display: flex;

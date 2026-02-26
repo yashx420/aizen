@@ -66,7 +66,7 @@ const Navbar = () => {
               </a>
             ))}
             <Link
-              to="/demo"
+              to="/demo/dashboard"
               className="bg-white text-black px-6 py-2.5 rounded-md text-sm font-semibold transition-opacity hover:opacity-90"
             >
               See Free Demo
