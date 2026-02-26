@@ -6,15 +6,14 @@
   :root {
     --bg: #050505;
     --text: #ffffff;
-    --primary: #8a2be2;
-    --secondary: #00ffff;
-    --accent: #ff00ff;
+    --primary: #6b3fa0;
+    --secondary: #3dbfbf;
+    --accent: #8b5fd0;
   }
 
   html,
   body {
     @apply bg-[#050505] text-white font-dm-sans antialiased overflow-x-hidden;
-    cursor: none; /* Hide default cursor for custom one */
   }
 
   ::selection {
@@ -24,10 +23,10 @@
 
 @layer components {
   .section-title {
-    @apply font-syne font-bold text-5xl md:text-7xl lg:text-[100px] leading-[0.9] tracking-tighter;
+    @apply font-dm-sans font-bold text-5xl md:text-7xl lg:text-[80px] leading-[0.95] tracking-tight;
   }
   .section-label {
-    @apply font-jetbrains text-xs font-semibold tracking-[4px] uppercase text-cyan-primary mb-6 flex items-center gap-4;
+    @apply font-dm-sans text-xs font-semibold tracking-[3px] uppercase text-cyan-primary mb-6 flex items-center gap-4;
   }
   .section-label::before {
     content: "";
@@ -37,9 +36,9 @@
     background: var(--secondary);
   }
 
-  /* Crazy BTN */
+  /* Button */
   .btn-premium {
-    @apply relative px-8 py-4 rounded-full font-syne font-bold overflow-hidden isolation-auto z-10 inline-flex justify-center items-center gap-2;
+    @apply relative px-8 py-4 rounded-full font-dm-sans font-bold overflow-hidden isolation-auto z-10 inline-flex justify-center items-center gap-2;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -50,7 +49,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(90deg, #8a2be2, #00ffff, #ff00ff);
+    background: linear-gradient(135deg, #6b3fa0, #3dbfbf);
     opacity: 0;
     transition: opacity 0.4s;
   }
@@ -58,8 +57,8 @@
     opacity: 1;
   }
   .btn-premium:hover {
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+    transform: scale(1.03) translateY(-3px);
+    box-shadow: 0 15px 30px rgba(61, 191, 191, 0.15);
     border-color: transparent;
   }
 }
@@ -71,8 +70,8 @@
   z-index: -1;
   background-size: 100px 100px;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
   transform: perspective(1000px) rotateX(60deg) translateY(-100px)
     translateZ(-200px);
@@ -93,9 +92,9 @@
 .ambient-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(100px);
+  filter: blur(120px);
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.3;
   animation: orbDrift 15s ease-in-out infinite alternate;
 }
 @keyframes orbDrift {
@@ -103,28 +102,28 @@
     transform: translate(0, 0) scale(1);
   }
   100% {
-    transform: translate(100px, -150px) scale(1.5);
+    transform: translate(100px, -150px) scale(1.3);
   }
 }
 
-/* Text glow */
+/* Text styles */
 .text-glow {
   text-shadow: none;
 }
 .text-outline {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
 }
 
-/* Bento Glass Box */
+/* Glass Box */
 .bento-box {
   background: rgba(20, 20, 25, 0.4);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
   position: relative;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .bento-box::before {
   content: "";
@@ -136,16 +135,14 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.15),
     transparent
   );
 }
 .bento-box:hover {
-  transform: translateY(-5px) scale(1.02);
-  border-color: rgba(0, 255, 255, 0.3);
-  box-shadow:
-    0 30px 60px rgba(0, 0, 0, 0.5),
-    0 0 40px rgba(0, 255, 255, 0.1);
+  transform: translateY(-3px);
+  border-color: rgba(61, 191, 191, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Stacking Cards */
