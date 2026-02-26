@@ -64,43 +64,6 @@
   }
 }
 
-/* Base custom cursor - Only show on devices with a mouse */
-@media (hover: hover) and (pointer: fine) {
-  *,
-  input[type="range"],
-  input[type="range"]::-webkit-slider-thumb,
-  input[type="range"]::-moz-range-thumb {
-    cursor: none !important;
-  }
-  .cursor-dot {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-    z-index: 99999;
-    transform: translate(-3px, -3px);
-  }
-  .cursor-dot svg {
-    width: 20px;
-    height: 20px;
-    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
-  }
-}
-
-/* On touch devices, ensure cursor is visible */
-@media (hover: none) {
-  html,
-  body {
-    cursor: auto !important;
-  }
-  .cursor-dot,
-  .cursor-outline {
-    display: none !important;
-  }
-}
-
 /* Background Animated Grid */
 .bg-grid {
   position: fixed;
