@@ -76,8 +76,7 @@ const ServicesGrid = () => {
       className="relative py-32 px-6 max-w-[1200px] mx-auto"
     >
       <div className="text-center mb-16">
-        <div className="section-label justify-center">Our Arsenal</div>
-        <h2 className="font-dm-sans text-[40px] md:text-[60px] font-bold text-white tracking-tight mb-4">
+        <h2 className="section-title text-[40px] md:text-[60px] text-white mb-4">
           OUR ARSENAL
         </h2>
         <p className="font-dm-sans text-white/50 tracking-[4px] uppercase text-sm">

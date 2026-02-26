@@ -181,6 +181,21 @@ const Results = () => {
               {c.desc}{" "}
               <span className="text-[#5E19E1] font-medium">{c.highlight}</span>
             </p>
+            {c.details && (
+              <div className="mt-4 pt-4 border-t border-white/5 flex items-center gap-2 text-[#5E19E1] text-sm font-medium group-hover:gap-3 transition-all">
+                View Case Study
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+            )}
           </div>
         ))}
       </div>
