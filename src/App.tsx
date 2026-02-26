@@ -31,72 +31,76 @@ function LandingPage() {
   return (
     <ReactLenis root options={{ lerp: 0.05, duration: 1.5, smoothWheel: true }}>
       <div className="relative min-h-screen">
-        <div className="bg-grid" />
+        {/* Main content wrapper - acts as the curtain */}
+        <div className="relative z-20 bg-[#050505] rounded-b-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
+          <div className="bg-grid" />
 
-        <div className="ambient-orb bg-primary/40 w-[300px] h-[300px] md:w-[600px] md:h-[600px] top-0 left-[-150px] md:left-[-200px]" />
-        <div
-          className="ambient-orb bg-secondary/30 w-[800px] h-[800px] top-[150vh] right-[-300px] hidden md:block"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="ambient-orb bg-accent/20 w-[400px] h-[400px] md:w-[600px] md:h-[600px] top-[300vh] left-[-100px]"
-          style={{ animationDelay: "4s" }}
-        />
-        <div
-          className="ambient-orb bg-primary/30 w-[1000px] h-[1000px] top-[450vh] right-[-400px] hidden md:block"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="ambient-orb bg-secondary/40 w-[500px] h-[500px] md:w-[700px] md:h-[700px] top-[600vh] left-[-200px]"
-          style={{ animationDelay: "3s" }}
-        />
+          <div className="ambient-orb bg-primary/40 w-[300px] h-[300px] md:w-[600px] md:h-[600px] top-0 left-[-150px] md:left-[-200px]" />
+          <div
+            className="ambient-orb bg-secondary/30 w-[800px] h-[800px] top-[150vh] right-[-300px] hidden md:block"
+            style={{ animationDelay: "2s" }}
+          />
+          <div
+            className="ambient-orb bg-accent/20 w-[400px] h-[400px] md:w-[600px] md:h-[600px] top-[300vh] left-[-100px]"
+            style={{ animationDelay: "4s" }}
+          />
+          <div
+            className="ambient-orb bg-primary/30 w-[1000px] h-[1000px] top-[450vh] right-[-400px] hidden md:block"
+            style={{ animationDelay: "1s" }}
+          />
+          <div
+            className="ambient-orb bg-secondary/40 w-[500px] h-[500px] md:w-[700px] md:h-[700px] top-[600vh] left-[-200px]"
+            style={{ animationDelay: "3s" }}
+          />
 
-        <Navbar />
+          <Navbar />
 
-        <main className="relative z-10">
-          <Hero />
+          <main className="relative z-10">
+            <Hero />
 
-          <div className="mt-16 relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-primary/5 to-transparent pointer-events-none" />
-            <div
-              ref={calcRef}
-              className="py-20 max-w-[1200px] mx-auto px-6 md:px-10 relative z-10"
-            />
-          </div>
+            <div className="mt-16 relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-primary/5 to-transparent pointer-events-none" />
+              <div
+                ref={calcRef}
+                className="py-20 max-w-[1200px] mx-auto px-6 md:px-10 relative z-10"
+              />
+            </div>
 
-          <div className="mt-20">
-            <Problem />
-          </div>
+            <div className="mt-20">
+              <Problem />
+            </div>
 
-          <div className="mt-32">
-            <Difference />
-          </div>
+            <div className="mt-32">
+              <Difference />
+            </div>
 
-          <div className="mt-32">
-            <ServicesGrid />
-          </div>
+            <div className="mt-32">
+              <ServicesGrid />
+            </div>
 
-          <div className="mt-32">
-            <Process />
-          </div>
+            <div className="mt-32">
+              <Process />
+            </div>
 
-          <div className="mt-32">
-            <Results />
-          </div>
+            <div className="mt-32">
+              <Results />
+            </div>
 
-          <div className="mt-16">
-            <Founder />
-          </div>
+            <div className="mt-16">
+              <Founder />
+            </div>
 
-          <div className="mt-8">
-            <Guarantee />
-          </div>
+            <div className="mt-8">
+              <Guarantee />
+            </div>
 
-          <div className="mt-32">
-            <Faq />
-          </div>
-        </main>
+            <div className="mt-32">
+              <Faq />
+            </div>
+          </main>
+        </div>
 
+        {/* Footer is sticky behind the curtain */}
         <Footer />
       </div>
     </ReactLenis>
