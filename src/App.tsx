@@ -56,20 +56,20 @@ function LandingPage() {
         <main className="relative z-10">
           <Hero />
 
+          <div className="mt-16 relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-primary/5 to-transparent pointer-events-none" />
+            <div
+              ref={calcRef}
+              className="py-20 max-w-[1200px] mx-auto px-6 md:px-10 relative z-10"
+            />
+          </div>
+
           <div className="mt-20">
             <Problem />
           </div>
 
           <div className="mt-32">
             <Difference />
-          </div>
-
-          <div className="mt-32 relative">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-primary/5 to-transparent pointer-events-none" />
-            <div
-              ref={calcRef}
-              className="py-20 max-w-[1200px] mx-auto px-6 md:px-10 relative z-10"
-            />
           </div>
 
           <div className="mt-32">

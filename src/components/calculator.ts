@@ -127,8 +127,11 @@ export function initCalculator(element: HTMLElement) {
         }
         input[type=range] {
           -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           width: 100%;
           background: transparent;
+          outline: none;
         }
         input[type=range]::-webkit-slider-thumb {
           -webkit-appearance: none;
@@ -137,8 +140,9 @@ export function initCalculator(element: HTMLElement) {
           border-radius: 50%;
           background: white;
           cursor: pointer;
-          margin-top: -6px;
+          margin-top: -7px;
           transition: transform 0.2s;
+          box-shadow: 0 0 6px rgba(255,255,255,0.4);
         }
         input[type=range]::-webkit-slider-thumb:hover {
           transform: scale(1.3);
@@ -147,12 +151,29 @@ export function initCalculator(element: HTMLElement) {
           width: 100%;
           height: 2px;
           cursor: pointer;
-          background: rgba(255,255,255,0.5);
+          background: rgba(255,255,255,0.45);
           border-radius: 2px;
-          transition: background 0.3s;
         }
         input[type=range]:hover::-webkit-slider-runnable-track {
           background: rgba(255,255,255,0.7);
+        }
+        /* Firefox */
+        input[type=range]::-moz-range-track {
+          width: 100%;
+          height: 2px;
+          cursor: pointer;
+          background: rgba(255,255,255,0.45);
+          border-radius: 2px;
+          border: none;
+        }
+        input[type=range]::-moz-range-thumb {
+          height: 14px;
+          width: 14px;
+          border-radius: 50%;
+          background: white;
+          cursor: pointer;
+          border: none;
+          box-shadow: 0 0 6px rgba(255,255,255,0.4);
         }
         /* Results */
         .calc-results {
