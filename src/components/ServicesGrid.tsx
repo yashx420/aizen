@@ -50,12 +50,12 @@ const ServicesGrid = () => {
       // Simple staggered fade-in from below
       gsap.fromTo(
         cards,
-        { y: 40, opacity: 0 },
+        { y: 20, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.6,
-          stagger: 0.1,
+          duration: 0.3,
+          stagger: 0.05,
           ease: "power2.out",
           scrollTrigger: {
             trigger: containerRef.current,
@@ -73,7 +73,7 @@ const ServicesGrid = () => {
     <section
       ref={containerRef}
       id="services-crazy"
-      className="relative py-32 px-6 max-w-[1200px] mx-auto"
+      className="relative py-16 px-6 max-w-[1200px] mx-auto"
     >
       <div className="text-center mb-16">
         <h2 className="section-title text-[40px] md:text-[60px] text-white mb-4">
@@ -88,15 +88,15 @@ const ServicesGrid = () => {
         {services.map((svc, i) => (
           <div
             key={i}
-            className={`arsenal-card relative bg-white/[0.03] border border-white/10 rounded-2xl p-6 flex items-center gap-5 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] ${svc.wide ? "md:col-span-2" : "md:col-span-1"}`}
+            className={`arsenal-card relative bg-white/[0.03] border border-white/10 rounded-2xl p-8 flex items-center gap-6 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06] ${svc.wide ? "md:col-span-2" : "md:col-span-1"}`}
           >
-            <div className="text-[36px] shrink-0">{svc.icon}</div>
+            <div className="text-[42px] shrink-0">{svc.icon}</div>
 
             <div className="text-left">
-              <h3 className="font-dm-sans text-[20px] font-bold text-white leading-tight uppercase tracking-tight">
+              <h3 className="font-dm-sans text-[22px] md:text-[24px] font-bold text-white leading-tight uppercase tracking-tight">
                 {svc.title}
               </h3>
-              <p className="text-[14px] text-white/50 font-dm-sans leading-snug mt-1">
+              <p className="text-[15px] text-white/50 font-dm-sans leading-snug mt-2">
                 {svc.desc}
               </p>
             </div>

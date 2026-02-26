@@ -116,7 +116,7 @@ const Difference = () => {
               <h2 className="section-title text-[30px] md:text-[45px] text-outline uppercase tracking-tighter mix-blend-screen opacity-40 mb-4">
                 THE DIFFERENCE
               </h2>
-              <h3 className="font-dm-sans text-[40px] md:text-[55px] font-bold text-[#5E19E1] mb-6 uppercase leading-none text-glow ">
+              <h3 className="font-dm-sans text-[50px] md:text-[70px] font-bold text-[#5E19E1] mb-6 uppercase leading-none text-glow ">
                 Technical
                 <br />
                 Cofounders.
