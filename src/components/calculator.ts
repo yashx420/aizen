@@ -145,14 +145,14 @@ export function initCalculator(element: HTMLElement) {
         }
         input[type=range]::-webkit-slider-runnable-track {
           width: 100%;
-          height: 3px;
+          height: 2px;
           cursor: pointer;
-          background: rgba(255,255,255,0.1);
+          background: rgba(255,255,255,0.5);
           border-radius: 2px;
           transition: background 0.3s;
         }
         input[type=range]:hover::-webkit-slider-runnable-track {
-          background: rgba(255,255,255,0.2);
+          background: rgba(255,255,255,0.7);
         }
         /* Results */
         .calc-results {
