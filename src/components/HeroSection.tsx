@@ -53,7 +53,7 @@ const itemVariants: Variants = {
 const textToAnimate = ["Your", "AI", "Systems", "Partner"];
 
 const HeroSection = ({ onOpenGameplan }: HeroSectionProps) => (
-  <section className="relative flex items-center justify-center pt-44 md:pt-52 pb-16 overflow-hidden min-h-[85vh]">
+  <section className="relative flex items-center justify-center pt-32 md:pt-48 pb-16 overflow-hidden min-h-[85vh]">
     {/* Radial glow - animated */}
     <motion.div
       animate={{
@@ -65,7 +65,7 @@ const HeroSection = ({ onOpenGameplan }: HeroSectionProps) => (
         repeat: Infinity,
         ease: "easeInOut",
       }}
-      className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-primary/20 blur-[120px] pointer-events-none"
+      className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[400px] md:h-[600px] rounded-full bg-primary/20 blur-[100px] md:blur-[120px] pointer-events-none"
     />
 
     <div className="container-custom relative z-10 text-center">
@@ -73,7 +73,7 @@ const HeroSection = ({ onOpenGameplan }: HeroSectionProps) => (
         initial={{ opacity: 0, y: 20, filter: "blur(5px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
-        className="inline-block text-xs font-mono uppercase tracking-[0.2em] text-primary mb-6"
+        className="inline-block text-[10px] md:text-xs font-mono uppercase tracking-[0.2em] text-primary mb-6"
       >
         BUILT TO SCALE
       </motion.span>
@@ -82,7 +82,7 @@ const HeroSection = ({ onOpenGameplan }: HeroSectionProps) => (
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="text-4xl md:text-5xl lg:text-[64px] font-display font-bold tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto flex flex-wrap justify-center gap-[0.3em]"
+        className="text-[40px] md:text-6xl lg:text-[72px] font-display font-bold tracking-tight leading-[1.05] mb-6 max-w-4xl mx-auto flex flex-wrap justify-center gap-x-[0.3em] gap-y-2"
       >
         {textToAnimate.map((word, i) => (
           <motion.span key={i} variants={itemVariants} className="inline-block">

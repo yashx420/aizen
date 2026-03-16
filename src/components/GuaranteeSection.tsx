@@ -70,7 +70,7 @@ const GuaranteeSection = () => {
                 mouseY.set(0);
               }}
               style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-              className="relative aspect-square max-w-[450px] mx-auto group cursor-none md:cursor-default"
+              className="relative aspect-square max-w-[320px] md:max-w-[450px] mx-auto group cursor-none md:cursor-default"
             >
               {/* Shield Glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-blue-500/20 rounded-full blur-3xl opacity-50 group-hover:opacity-80 transition-opacity duration-1000" />
@@ -80,7 +80,7 @@ const GuaranteeSection = () => {
                 style={{ transform: "translateZ(50px)" }}
               >
                 {/* The Shield */}
-                <div className="relative w-64 h-64 md:w-80 md:h-80 bg-background/40 backdrop-blur-xl border-2 border-primary/30 rounded-[3rem] overflow-hidden flex flex-col items-center justify-center shadow-2xl">
+                <div className="relative w-56 h-56 md:w-80 md:h-80 bg-background/40 backdrop-blur-xl border-2 border-primary/30 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden flex flex-col items-center justify-center shadow-2xl">
                   {/* Internal Grid lines */}
                   <div
                     className="absolute inset-0 opacity-10"
@@ -97,17 +97,21 @@ const GuaranteeSection = () => {
                         ? { scale: 1.1, rotate: 5 }
                         : { scale: 1, rotate: 0 }
                     }
-                    className="relative z-10 w-24 h-24 md:w-32 md:h-32 bg-primary/20 rounded-3xl border border-primary/50 flex items-center justify-center mb-6 shadow-[0_0_40px_rgba(139,92,246,0.5)]"
+                    className="relative z-10 w-20 h-20 md:w-32 md:h-32 bg-primary/20 rounded-3xl border border-primary/50 flex items-center justify-center mb-6 shadow-[0_0_40px_rgba(139,92,246,0.5)]"
                   >
-                    <ShieldCheck size={64} className="text-primary" />
+                    <ShieldCheck size={52} className="text-primary md:hidden" />
+                    <ShieldCheck
+                      size={64}
+                      className="text-primary hidden md:block"
+                    />
                     <Sparkles className="absolute -top-2 -right-2 text-primary animate-pulse" />
                   </motion.div>
 
                   <div className="text-center px-6 relative z-10">
-                    <p className="text-xs font-mono uppercase tracking-[0.3em] text-primary mb-2 font-bold">
+                    <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-primary mb-2 font-bold">
                       Encrypted
                     </p>
-                    <h4 className="text-xl md:text-2xl font-display font-bold">
+                    <h4 className="text-lg md:text-2xl font-display font-bold">
                       Zero-Risk Trust
                     </h4>
                   </div>
@@ -119,25 +123,26 @@ const GuaranteeSection = () => {
 
               {/* Floaties */}
               <motion.div
-                animate={{ y: [0, -15, 0] }}
+                animate={{ y: [0, -10, 0] }}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
                 style={{ transform: "translateZ(80px)" }}
-                className="absolute top-10 right-0 p-4 bg-card/80 backdrop-blur-md border border-border/50 rounded-2xl shadow-xl flex items-center gap-3"
+                className="absolute top-4 md:top-10 right-0 p-3 md:p-4 bg-card/80 backdrop-blur-md border border-border/50 rounded-xl md:rounded-2xl shadow-xl flex items-center gap-2 md:gap-3"
               >
-                <div className="h-8 w-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
-                  <Zap size={16} className="text-emerald-500" />
+                <div className="h-6 w-6 md:h-8 md:w-8 rounded-lg bg-emerald-500/20 flex items-center justify-center">
+                  <Zap size={12} className="text-emerald-500 md:hidden" />
+                  <Zap size={16} className="text-emerald-500 hidden md:block" />
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-widest">
+                <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest">
                   No Risk
                 </span>
               </motion.div>
 
               <motion.div
-                animate={{ y: [0, 15, 0] }}
+                animate={{ y: [0, 10, 0] }}
                 transition={{
                   duration: 5,
                   repeat: Infinity,
@@ -145,12 +150,13 @@ const GuaranteeSection = () => {
                   delay: 1,
                 }}
                 style={{ transform: "translateZ(100px)" }}
-                className="absolute bottom-10 left-0 p-4 bg-card/80 backdrop-blur-md border border-border/50 rounded-2xl shadow-xl flex items-center gap-3"
+                className="absolute bottom-4 md:bottom-10 left-0 p-3 md:p-4 bg-card/80 backdrop-blur-md border border-border/50 rounded-xl md:rounded-2xl shadow-xl flex items-center gap-2 md:gap-3"
               >
-                <div className="h-8 w-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                  <Lock size={16} className="text-blue-500" />
+                <div className="h-6 w-6 md:h-8 md:w-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                  <Lock size={12} className="text-blue-500 md:hidden" />
+                  <Lock size={16} className="text-blue-500 hidden md:block" />
                 </div>
-                <span className="text-[10px] font-bold uppercase tracking-widest">
+                <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest">
                   Verify First
                 </span>
               </motion.div>

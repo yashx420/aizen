@@ -82,16 +82,16 @@ const AIBrainDiagram = () => (
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="relative mx-auto w-40 h-40 md:w-48 md:h-48 mb-12"
+          className="relative mx-auto w-32 h-32 md:w-48 md:h-48 mb-12"
         >
           <div className="absolute inset-0 rounded-full gradient-bg opacity-20 blur-2xl animate-pulse-slow" />
           <div className="absolute inset-3 rounded-full gradient-bg opacity-10 blur-xl animate-pulse-slow" />
           <div className="absolute inset-0 rounded-full border border-primary/30 flex items-center justify-center bg-card/80">
             <div className="text-center">
-              <p className="text-sm font-display font-bold gradient-text">
+              <p className="text-xs md:text-sm font-display font-bold gradient-text">
                 AI Operating System
               </p>
-              <p className="text-[10px] text-muted-foreground mt-1">
+              <p className="text-[8px] md:text-[10px] text-muted-foreground mt-1 uppercase tracking-tighter">
                 (YOUR AI BRAIN)
               </p>
             </div>
