@@ -108,7 +108,7 @@ const HeroSection = ({ onOpenGameplan }: HeroSectionProps) => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.5 }}
-        className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+        className="flex justify-center items-center mb-16"
       >
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <BlobButton
@@ -131,24 +131,6 @@ const HeroSection = ({ onOpenGameplan }: HeroSectionProps) => (
               </motion.span>
             </span>
           </BlobButton>
-        </motion.div>
-
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={onOpenGameplan}
-            className="rounded-2xl group h-12 px-8 flex items-center gap-2"
-          >
-            Get Your Free AI Gameplan
-            <motion.span
-              initial={{ y: 0 }}
-              whileHover={{ y: 3 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <ArrowDown size={16} />
-            </motion.span>
-          </Button>
         </motion.div>
       </motion.div>
     </div>
