@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import { useLenis } from "@studio-freight/react-lenis";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ResultsSection from "@/components/ResultsSection";
@@ -23,24 +22,32 @@ import GameplanForm from "@/components/GameplanForm";
 const Index = () => {
   const [gameplanOpen, setGameplanOpen] = useState(false);
   const location = useLocation();
-  const lenis = useLenis();
 
   useEffect(() => {
     // Handle cross-page navigation from state (to avoid hashes)
-    if (lenis && location.state && (location.state as any).scrollTo) {
+    if (location.state && (location.state as any).scrollTo) {
       const id = (location.state as any).scrollTo;
       // We wait slightly longer to ensure the global ScrollToTop reset has finished
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          // Use lenis.scrollTo instead of scrollIntoView for better reliability
-          lenis.scrollTo(element, { offset: -100, duration: 1.5 });
+          // Native scroll jump
+          const offset = 100;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = element.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "auto", // Immediate jump
+          });
         }
       }, 250);
       // Clear state so it doesn't scroll again on refresh
       window.history.replaceState({}, document.title);
     }
-  }, [location, lenis]);
+  }, [location]);
 
   return (
     <div className="relative min-h-screen text-foreground overflow-x-hidden">

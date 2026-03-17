@@ -1,10 +1,8 @@
 import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useLenis } from "@studio-freight/react-lenis";
 
 const ScrollToTop = () => {
   const location = useLocation();
-  const lenis = useLenis();
 
   useLayoutEffect(() => {
     // If we have a specific scrollTo state, let the target page handle it
@@ -14,9 +12,6 @@ const ScrollToTop = () => {
 
     const resetScroll = () => {
       window.scrollTo(0, 0);
-      if (lenis) {
-        lenis.scrollTo(0, { immediate: true });
-      }
     };
 
     // Immediate jump
@@ -30,7 +25,7 @@ const ScrollToTop = () => {
       cancelAnimationFrame(rafId);
       clearTimeout(timeoutId);
     };
-  }, [location.pathname, location.state, lenis]);
+  }, [location.pathname, location.state]);
 
   return null;
 };
