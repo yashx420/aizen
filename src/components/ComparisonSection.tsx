@@ -111,17 +111,18 @@ const ComparisonSection = () => (
         {/* Glassmorphic Table Hardware */}
         <div className="rounded-[2.5rem] border border-white/10 bg-card/30 backdrop-blur-xl overflow-hidden shadow-2xl">
           {/* Header */}
-          <div className="grid grid-cols-2 md:grid-cols-4 border-b border-white/5 bg-white/[0.02]">
+          {/* Header */}
+          <div className="grid grid-cols-3 md:grid-cols-4 border-b border-white/5 bg-white/[0.02]">
             <div className="p-6 md:p-8 text-xs md:text-sm font-mono uppercase tracking-widest text-muted-foreground hidden md:block">
               Feature
             </div>
-            <div className="p-6 md:p-8 text-xs md:text-sm font-mono uppercase tracking-widest text-muted-foreground flex items-center justify-center md:justify-start">
+            <div className="p-4 md:p-8 text-[10px] md:text-sm font-mono uppercase tracking-widest text-muted-foreground flex items-center justify-center md:justify-start text-center">
               Freelancer
             </div>
-            <div className="p-6 md:p-8 text-xs md:text-sm font-mono uppercase tracking-widest text-muted-foreground flex items-center justify-center md:justify-start">
+            <div className="p-4 md:p-8 text-[10px] md:text-sm font-mono uppercase tracking-widest text-muted-foreground flex items-center justify-center md:justify-start text-center">
               Agency
             </div>
-            <div className="p-6 md:p-8 bg-primary/5 flex items-center justify-center md:justify-start border-l border-primary/20 relative group/logo">
+            <div className="p-4 md:p-8 bg-primary/5 flex items-center justify-center md:justify-start border-l border-primary/20 relative group/logo">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover/logo:opacity-100 transition-opacity duration-700" />
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -144,7 +145,7 @@ const ComparisonSection = () => (
                 <img
                   src={aizenLogo}
                   alt="AIZEN"
-                  className="h-5 md:h-6 opacity-90 group-hover/logo:opacity-100 transition-all duration-300"
+                  className="h-4 md:h-6 opacity-90 group-hover/logo:opacity-100 transition-all duration-300"
                 />
               </motion.div>
             </div>
@@ -158,33 +159,36 @@ const ComparisonSection = () => (
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="grid grid-cols-2 md:grid-cols-4 border-b border-white/5 last:border-0 hover:bg-white/[0.02] transition-colors group"
+              className="flex flex-col md:grid md:grid-cols-4 border-b border-white/5 last:border-0 hover:bg-white/[0.02] transition-colors group"
             >
-              <div className="p-6 md:p-8 border-r border-white/5 hidden md:flex items-center">
-                <span className="text-sm font-bold text-foreground/80 group-hover:text-primary transition-colors">
+              {/* Feature Title - Mobile Header */}
+              <div className="px-6 pt-6 pb-2 md:p-8 border-r border-white/5 flex items-center bg-white/[0.01] md:bg-transparent">
+                <span className="text-[11px] md:text-sm font-bold uppercase tracking-wider md:normal-case md:tracking-normal text-primary md:text-foreground/80 group-hover:text-primary transition-colors">
                   {f.name}
                 </span>
               </div>
 
-              <div className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-4 border-r border-white/5">
-                <StatusIcon status={f.status[0]} />
-                <span className="text-xs md:text-sm text-center md:text-left text-muted-foreground/60 leading-tight">
-                  {f.freelancer}
-                </span>
-              </div>
+              <div className="grid grid-cols-3 md:contents w-full">
+                <div className="p-4 md:p-8 flex flex-col md:flex-row items-center gap-3 md:gap-4 border-r border-white/5">
+                  <StatusIcon status={f.status[0]} />
+                  <span className="text-[10px] md:text-sm text-center md:text-left text-muted-foreground/60 leading-tight">
+                    {f.freelancer}
+                  </span>
+                </div>
 
-              <div className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-4 border-r border-white/5">
-                <StatusIcon status={f.status[1]} />
-                <span className="text-xs md:text-sm text-center md:text-left text-muted-foreground/60 leading-tight">
-                  {f.agency}
-                </span>
-              </div>
+                <div className="p-4 md:p-8 flex flex-col md:flex-row items-center gap-3 md:gap-4 border-r border-white/5">
+                  <StatusIcon status={f.status[1]} />
+                  <span className="text-[10px] md:text-sm text-center md:text-left text-muted-foreground/60 leading-tight">
+                    {f.agency}
+                  </span>
+                </div>
 
-              <div className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-4 bg-primary/[0.02] border-l border-primary/20">
-                <StatusIcon status={f.status[2]} isAizen />
-                <span className="text-sm md:text-base text-center md:text-left font-bold text-foreground leading-tight">
-                  {f.aizen}
-                </span>
+                <div className="p-4 md:p-8 flex flex-col md:flex-row items-center gap-3 md:gap-4 bg-primary/[0.02] border-l border-primary/20">
+                  <StatusIcon status={f.status[2]} isAizen />
+                  <span className="text-[11px] md:text-base text-center md:text-left font-bold text-foreground leading-tight">
+                    {f.aizen}
+                  </span>
+                </div>
               </div>
             </motion.div>
           ))}

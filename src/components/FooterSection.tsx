@@ -56,7 +56,7 @@ const FooterSection = () => {
 
   return (
     <footer className="fixed bottom-0 left-0 right-0 z-0 bg-card overflow-hidden will-change-transform pointer-events-auto">
-      <div className="container-custom py-10 md:py-12">
+      <div className="container-custom py-8 md:py-12">
         {/* Top area */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
           {/* Brand Column */}

@@ -31,7 +31,7 @@ const StepCard = ({ step, index }: any) => {
 
   return (
     <div
-      className={`flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 mb-24 last:mb-0 ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
+      className={`flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 mb-16 md:mb-24 last:mb-0 ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
     >
       {/* Content */}
       <motion.div
@@ -42,7 +42,7 @@ const StepCard = ({ step, index }: any) => {
         className="flex-1 w-full"
       >
         <div
-          className={`bg-card/40 backdrop-blur-xl border border-border/50 p-8 md:p-10 rounded-[2.5rem] relative overflow-hidden group hover:border-primary/50 transition-colors duration-500 shadow-xl ${!isEven ? "text-right md:text-right" : "text-left"}`}
+          className={`bg-card/40 backdrop-blur-xl border border-border/50 p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] relative overflow-hidden group hover:border-primary/50 transition-colors duration-500 shadow-xl text-left md:${!isEven ? "text-right" : "text-left"}`}
         >
           <div
             className={`absolute top-0 ${isEven ? "right-0" : "left-0"} p-8 opacity-5 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none`}
