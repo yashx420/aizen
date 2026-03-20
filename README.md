@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# 🌌 Aizen Core Engine
 
-## Project info
+> **The Pulsing Heart of AI-Driven Growth.**  
+> Aizen is a high-performance, high-converting landing engine designed to showcase AI automation services with premium aesthetics and cutting-edge interactive components.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **🧠 Integrated AI Brain Diagram**: Interactive visualization of complex AI logic and neural processes.
+- **📊 Real-time Bottleneck Analysis**: Dynamic SVG-based diagrams showing process optimization.
+- **📱 Dashboard Previews**: High-fidelity UI mockups for data analytics and campaign management.
+- **🎬 Video Testimonials**: Seamlessly integrated social proof with fluid modal experiences.
+- **🎨 Premium UI/UX**: Built with a "dark-mode first" philosophy, featuring glassmorphism and deep violet accents.
+- **🎭 Motion-Heavy Layouts**: Smooth transitions and entry animations powered by Framer Motion.
+- **🏗️ Scalable Architecture**: Built with modern React patterns and fully typed with TypeScript.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+| Layer             | Technology                                                                     |
+| :---------------- | :----------------------------------------------------------------------------- |
+| **Framework**     | [React 18](https://reactjs.org/) + [Vite](https://vitejs.dev/)                 |
+| **Language**      | [TypeScript](https://www.typescriptlang.org/)                                  |
+| **Styling**       | [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) |
+| **Animations**    | [Framer Motion](https://www.framer.com/motion/)                                |
+| **Icons**         | [Lucide React](https://lucide.dev/)                                            |
+| **Backend/Auth**  | [Supabase](https://supabase.com/)                                              |
+| **Data Fetching** | [TanStack Query v5](https://tanstack.com/query/latest)                         |
+| **Charts**        | [Recharts](https://recharts.org/)                                              |
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- Node.js (v18.x or higher)
+- npm or bun
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. **Clone the repository:**
 
-# Step 3: Install the necessary dependencies.
-npm i
+   ```bash
+   git clone https://github.com/kanishk-aizen/aizen-core-engine.git
+   cd aizen-core-engine
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # OR
+   bun install
+   ```
+
+3. **Set up environment variables:**
+   Create a `.env` file in the root directory and add your Supabase credentials:
+
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/     # Reusable UI molecules and sections
+├── hooks/          # Custom React hooks (Supabase, UI state)
+├── lib/            # Utility functions (shadcn, formatting)
+├── pages/          # Full page components (Index, NotFound)
+└── types/          # Global TypeScript interfaces
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 👔 Deployment
 
-**Use GitHub Codespaces**
+This project is optimized for deployment on **Vercel** or **Netlify**. Ensure environment variables are configured in your deployment platform's dashboard.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 📄 License
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Private - All rights reserved.
+Built with ❤️ by Aizen Team.
