@@ -11,6 +11,7 @@ const links = [
   { label: "How It Works", href: "how-it-works" },
   { label: "Results", href: "results" },
   { label: "Case Studies", href: "/case-studies", isExternal: true },
+  { label: "About Us", href: "/about-us", isExternal: true },
   { label: "FAQ", href: "faq" },
 ];
 

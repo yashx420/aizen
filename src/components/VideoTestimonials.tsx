@@ -1,100 +1,48 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Play, Pause, X, Star } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
+import { Play, X, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
+import useEmblaCarousel from "embla-carousel-react";
 
+/* 
+ * Video Testimonials Data
+ * Reconstructed to support the split-pane design with short overlaid quotes
+ */
 const videos = [
   {
     src: "/test1.mp4",
+    quoteShort: "Shipped fast and super reliable!",
     quote:
-      "We would highly recommend anyone who's looking for an AI equipped development team who ships fast. They were super reliable and helped us launch our SaaS sooner",
-    client: "Voone — Voice AI platform (SaaS)",
+      "We would highly recommend anyone who's looking for an AI equipped development team who ships fast. They were super reliable and helped us launch our SaaS sooner.",
+    clientName: "Voone",
+    clientRole: "Voice AI platform (SaaS)",
     category: "SaaS",
   },
   {
     src: "/test2.mp4",
+    quoteShort: "Generate billions of views!",
     quote:
-      "Aizen helped me build an AI content operating system which allows my personal brand and clients to generate billions of views",
-    client: "Anti Prophet — Influencer (2.4M followers)",
+      "Aizen helped me build an AI content operating system which allows my personal brand and clients to generate billions of views.",
+    clientName: "Anti Prophet",
+    clientRole: "Influencer (2.4M followers)",
     category: "Content",
   },
   {
     src: "/test3.mp4",
+    quoteShort: "Restored our trust in outsourcing!",
     quote:
-      "AIZEN’s team was exceptional to work with. Their engineers executed quickly and delivered consistently. After difficult experiences with other agencies and development teams, I had lost trust in outsourcing software projects. AIZEN restored that confidence by building our Dreamster AI Music NFT SaaS platform in a fraction of the expected time while maintaining a high standard of quality.",
-    client: "Dreamster — AI Music NFT Platform",
+      "AIZEN’s team was exceptional to work with. Their engineers executed quickly and delivered consistently. After difficult experiences with other agencies, I had lost trust in outsourcing. AIZEN restored that confidence by building our Dreamster AI Music NFT SaaS platform in a fraction of the expected time.",
+    clientName: "Dreamster",
+    clientRole: "AI Music NFT SaaS",
     category: "Platform",
   },
 ];
 
-const VideoCard = ({
-  video,
-  index,
-  onPlay,
-}: {
-  video: (typeof videos)[0];
-  index: number;
-  onPlay: () => void;
-}) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
-      className="group relative bg-card border border-border/50 rounded-[2.5rem] overflow-hidden hover:border-primary/40 transition-all duration-500 shadow-xl"
-    >
-      {/* Thumbnail Container */}
-      <div
-        className="aspect-[4/3] relative cursor-pointer overflow-hidden bg-black"
-        onClick={onPlay}
-      >
-        <video
-          src={video.src}
-          className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700"
-          muted
-          playsInline
-        />
-
-        {/* Play Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-16 h-16 rounded-full bg-primary/20 backdrop-blur-xl border border-primary/30 flex items-center justify-center shadow-[0_0_30px_rgba(139,92,246,0.5)] group-hover:scale-110 transition-transform duration-500">
-            <Play size={28} className="text-white fill-white ml-1" />
-          </div>
-        </div>
-      </div>
-
-      <div className="p-6">
-        <div className="flex gap-1 mb-3">
-          {[1, 2, 3, 4, 5].map((s) => (
-            <Star
-              key={s}
-              size={12}
-              className="text-emerald-500 fill-emerald-500"
-            />
-          ))}
-        </div>
-        <p className="text-sm md:text-base font-display font-medium leading-relaxed mb-4 group-hover:text-primary transition-colors duration-300 line-clamp-4">
-          "{video.quote}"
-        </p>
-        <div className="flex items-center gap-3">
-          <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-          <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted-foreground/80">
-            {video.client}
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
 const VideoModal = ({
   video,
-  isLandscape = false,
   onClose,
 }: {
   video: (typeof videos)[0];
-  isLandscape?: boolean;
   onClose: () => void;
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -130,11 +78,11 @@ const VideoModal = ({
         initial={{ scale: 0.9, opacity: 0, y: 20 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
         exit={{ scale: 0.9, opacity: 0, y: 20 }}
-        className={`relative w-full ${isLandscape ? "max-w-5xl aspect-video" : "max-w-[400px] aspect-[9/16] h-[85vh]"} bg-black rounded-[2.5rem] overflow-hidden shadow-[0_0_100px_rgba(139,92,246,0.3)] border border-white/10 max-h-[90vh]`}
+        className="relative w-full max-w-5xl aspect-video bg-black rounded-[2.5rem] overflow-hidden shadow-[0_0_100px_rgba(139,92,246,0.3)] border border-white/10 max-h-[90vh]"
       >
         <video
           ref={videoRef}
-          className={`w-full h-full ${isLandscape ? "object-contain" : "object-cover"}`}
+          className="w-full h-full object-contain"
           autoPlay
           playsInline
           controls
@@ -177,8 +125,42 @@ const VideoModal = ({
   return createPortal(modalContent, document.body);
 };
 
+
 const VideoTestimonials = () => {
   const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
+  
+  // Embla Carousel Setup
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" });
+  
+  // Carousel State tracking
+  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+  const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
+
+  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setPrevBtnEnabled(emblaApi.canScrollPrev());
+    setNextBtnEnabled(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
+
+  // 6-7 second auto-play logic
+  useEffect(() => {
+    if (!emblaApi) return;
+    const autoplayInterval = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 6500); // exactly in the middle of 6-7s
+    return () => clearInterval(autoplayInterval);
+  }, [emblaApi]);
+
 
   return (
     <section
@@ -194,7 +176,7 @@ const VideoTestimonials = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-24"
+          className="text-center mb-16"
         >
           <span className="text-xs font-mono uppercase tracking-[0.3em] text-primary mb-6 block font-bold">
             Live Results
@@ -211,23 +193,111 @@ const VideoTestimonials = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {videos.map((v, i) => (
-            <VideoCard
-              key={i}
-              video={v}
-              index={i}
-              onPlay={() => setActiveVideoIndex(i)}
-            />
-          ))}
+        {/* Embla Carousel Container */}
+        <div className="relative max-w-6xl mx-auto flex items-center justify-center">
+          
+          {/* Left Chevron */}
+          <button 
+            onClick={scrollPrev}
+            className="hidden md:flex absolute -left-12 lg:-left-20 z-10 w-12 h-12 items-center justify-center rounded-full text-muted-foreground hover:text-white hover:bg-white/5 transition-colors"
+          >
+            <ChevronLeft size={36} />
+          </button>
+
+          <div className="embla overflow-hidden w-full rounded-[2rem] border border-white/5 shadow-2xl" ref={emblaRef}>
+            <div className="embla__container flex">
+              {videos.map((v, i) => (
+                <div className="embla__slide flex-[0_0_100%] min-w-0" key={i}>
+                  {/* Split Card Design */}
+                  <div className="flex flex-col lg:flex-row bg-[#11121c] w-full min-h-[400px]">
+                    
+                    {/* Left Pane: Video section */}
+                    <div className="relative w-full lg:w-1/2 aspect-video lg:aspect-auto bg-black overflow-hidden group cursor-pointer" onClick={() => setActiveVideoIndex(i)}>
+                      <video
+                        src={v.src}
+                        className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-50 transition-opacity duration-700"
+                        muted
+                        playsInline
+                      />
+                      
+                      {/* Playful quote overlay */}
+                      <div className="absolute inset-0 p-8 flex flex-col justify-center items-center text-center z-10">
+                        <h3 className="text-2xl md:text-3xl font-display font-bold text-white leading-tight max-w-[90%] shadow-black drop-shadow-md">
+                          "{v.quoteShort}"
+                        </h3>
+                      </div>
+
+                      {/* Play Button */}
+                      <div className="absolute inset-0 flex items-center justify-center z-20">
+                        <div className="w-16 h-16 rounded-full bg-black/40 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-2xl">
+                          <Play size={24} className="text-white fill-white ml-1 opacity-90" />
+                        </div>
+                      </div>
+
+                      {/* Client Logo / Info Box overlay */}
+                      <div className="absolute bottom-6 left-6 right-6 md:right-auto bg-black/60 backdrop-blur-md border border-white/10 p-3 rounded-2xl flex items-center gap-4 z-20 shadow-xl">
+                        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                          {v.clientName.charAt(0)}
+                        </div>
+                        <div className="flex flex-col text-left">
+                          <span className="text-sm font-bold text-white">{v.clientName}</span>
+                          <span className="text-xs text-muted-foreground">{v.clientRole}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right Pane: Text section */}
+                    <div className="w-full lg:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-gradient-to-br from-[#181a27] to-[#11121c]">
+                      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+                        <h4 className="text-2xl font-medium text-white tracking-wide">{v.clientName}</h4>
+                        <div className="flex gap-1.5">
+                          {[1, 2, 3, 4, 5].map((s) => (
+                            <Star
+                              key={s}
+                              size={18}
+                              className="text-[#3b82f6] fill-[#3b82f6] opacity-90"
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                        {v.quote}
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Chevron */}
+          <button 
+            onClick={scrollNext}
+            className="hidden md:flex absolute -right-12 lg:-right-20 z-10 w-12 h-12 items-center justify-center rounded-full text-muted-foreground hover:text-white hover:bg-white/5 transition-colors"
+          >
+            <ChevronRight size={36} />
+          </button>
+
         </div>
+        
+        {/* Mobile controls indicator (optional) */}
+        <div className="flex md:hidden justify-center gap-4 mt-8">
+          <button onClick={scrollPrev} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground">
+            <ChevronLeft size={20} />
+          </button>
+          <button onClick={scrollNext} className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-muted-foreground">
+            <ChevronRight size={20} />
+          </button>
+        </div>
+
       </div>
 
       <AnimatePresence>
         {activeVideoIndex !== null && (
           <VideoModal
             video={videos[activeVideoIndex]}
-            isLandscape={activeVideoIndex === 0}
             onClose={() => setActiveVideoIndex(null)}
           />
         )}
@@ -237,3 +307,4 @@ const VideoTestimonials = () => {
 };
 
 export default VideoTestimonials;
+
