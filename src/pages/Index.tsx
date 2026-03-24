@@ -11,6 +11,7 @@ import AIBrainDiagram from "@/components/AIBrainDiagram";
 import DashboardPreview from "@/components/DashboardPreview";
 import ComparisonSection from "@/components/ComparisonSection";
 import ServicesSection from "@/components/ServicesSection";
+import CrmSection from "@/components/CrmSection";
 import HowItWorks from "@/components/HowItWorks";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import VideoTestimonials from "@/components/VideoTestimonials";
@@ -57,13 +58,14 @@ const Index = () => {
         <Navbar />
         <HeroSection onOpenGameplan={() => setGameplanOpen(true)} />
         <ResultsSection />
+        <ServicesSection />
+        <CrmSection />
         <ProblemSection />
         <BottleneckDiagram />
         <WhoThisIsFor />
         <AIBrainDiagram />
         <DashboardPreview />
         <ComparisonSection />
-        <ServicesSection />
         <HowItWorks />
         <TestimonialsSection />
         <VideoTestimonials />
